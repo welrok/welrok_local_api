@@ -6,8 +6,8 @@ To obtain a list of available devices on the local network UDP broadcast packets
 .. code-block:: json
 
 	{
-		"sn":"058016000543464839373520000159",
-		"hw":"ax",
+		"sn":"404CCAAAD4E8A89860609800000149",
+		"hw":"az",
 		"cloud":"true",
 		"connection":"cloudCon",
 		"wifi":"-71",

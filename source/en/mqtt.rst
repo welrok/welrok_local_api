@@ -1,7 +1,7 @@
 **MQTT**
 ========
 
-Starting from firmware version 2.4 there's a possibility to collect telemetry and manage some parameters via MQTT protocol.
+There's a possibility to collect telemetry and manage some parameters via MQTT protocol.
 MQTT server connection settings are available only via the device web-interface, which is available at its local IP address:
 
 ``Host``/``Port`` - IP address and port of the MQTT server
@@ -21,7 +21,7 @@ MQTT server connection settings are available only via the device web-interface,
 .. note::
 		If no authorization is configured on the MQTT server, the ``User``/``Password`` fields are ignored.
 
-In software version 2.5 data are published every minute in the following topics:
+Published every minute in the following topics:
 
 ``Publish prefix``/``Client ID``/``get``/``floorTemp`` - floor temperature sensor readings (`temetry <telemetry.html>`_ **"t.1"**) in °C as "xx.x" (models with floor temperature sensor).
 
@@ -35,7 +35,7 @@ In software version 2.5 data are published every minute in the following topics:
 
 ``Publish prefix``/``Client ID``/``get``/``load`` - load status `(temetry <telemetry.html>`_ **"f.0"**) by string "0" - off, "1" - on.
 
-The following control topics are available in software version 2.5:
+The following control topics are available:
 
 ``Subscribe path``/``Client ID``/``set``/``setTemp`` - setpoint temperature, similar to ``setTemperature`` `parameter <parameters.html>`_.
 

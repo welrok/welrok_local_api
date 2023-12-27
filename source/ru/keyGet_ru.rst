@@ -12,7 +12,7 @@
 `Получение токена авторизации`
 ``````````````````````````````
 
-    **POST** `https://{server_url}/api/login/`
+    **POST** `https://app.welrok.com/api/login/`
 	
 .. code-block:: json
 	
@@ -31,7 +31,7 @@
 
 		{
 			"access_token":"9573e6a8e24b025fafbaf81dc2eccbc09b94d187",
-			"user_name":"myterneo",
+			"user_name":"welrok",
 			"is_timezone_chosen":true
 		}
 
@@ -43,17 +43,17 @@
 
 	{
 		POST /api/login/ HTTP/1.1
-		Host: my.hmarex.com
+		Host: app.welrok.com
 		Accept-Language: en
 		Content-Type: application/json
 		
-		{"email":"myterneo@gmail.com","password":"myterneo2018"}	
+		{"email":"demo@welrok.com","password":"demoaccount"}	
 	}
 
 `Получение списка устройств`
 ````````````````````````````
     
-    **GET** https://my.hmarex.com/api/device/ --header "Authorization: Token ``access_token``"
+    **GET** https://app.welrok.com/api/device/ --header "Authorization: Token ``access_token``"
 
 		**Параметры**
 			- ``access_token`` - токен авторизации в заголовке			        
@@ -68,11 +68,11 @@
 			"previous": null,
 			"results": [
 				{
-					"id": 18801,
-					"sn": "1100150010434B58363539XXXXXXXX",
-					"name": "Room1",
+					"id": 1,
+					"sn": "404CCAAAD4E8A89860609800000149",
+					"name": "az",
 					"":""
-					"totp_key": "BW4ERXAJXXXXXXXX"
+					"totp_key": "AAD4EXAJX4E8A8XT"
 				}
 			]
 
@@ -86,7 +86,7 @@
 
 	{
 		GET /api/device/ HTTP/1.1
-		Host: my.hmarex.com
+		Host: app.welrok.com
 		Accept-Language: en
 		Content-Type: application/json
 		Authorization: Token 9573e6a8e24b025fafbaf81dc2eccbc09b94d187	

@@ -2,12 +2,12 @@ Telemetry
 ~~~~~~~~~
 
 Telemetry is used to obtain the current state of device.
-To get telemetry, send command ``{"cmd": 4}``, for example, the answer for AX thermostat with firmware version 2.3 will be:
+To get telemetry, send command ``{"cmd": 4}``, for example, the answer for az thermostat will be:
 
 .. code-block:: json
 
      {
-      "sn":"058016000543464839373520000159",
+      "sn":"404CCAAAD4E8A89860609800000149",
       "t.0":"450","t.1":"416","t.5":"480",
       "m.0":"0","m.1":"3","m.2":"34","m.3":"2",
       "f.0":"1","f.1":"0","f.2":"0","f.3":"0",

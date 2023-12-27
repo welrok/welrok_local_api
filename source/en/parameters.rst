@@ -1,12 +1,12 @@
 Parameters list
 ~~~~~~~~~~~~~~~
 
-To get all available parameters of the device send command ``{"cmd":1}``, for example answer for *AX* thermostat with firmware version 2.3:
+To get all available parameters of the device send command ``{"cmd":1}``, for example answer for *az* thermostat with firmware version 2.5:
 
 .. code-block:: json
 
     {
-       "sn":"058016000543464839373520000159",
+       "sn":"404CCAAAD4E8A89860609800000149",
        "par":[[0,6,"536112000"],[1,6,"536112000"],
               [2,2,"1"],[3,2,"0"],[4,1,"30"],
               [5,1,"30"],[6,1,"25"],[7,1,"5"],
@@ -30,18 +30,18 @@ For example, turn on the device and set floor temperature in manual mode to 27 Â
 .. code-block:: json
 
     {
-      "sn":"058016000543464839373520000159",
+      "sn":"404CCAAAD4E8A89860609800000149",
       "par":[[125,7,"0"],[5,1,"27"]]
     }
 
 Answer:
 
-In firmware version 2.5, in response, we receive an updated list of parameters:
+In response, we receive an updated list of parameters:
 
 .. code-block:: json
 
 	{
-	 "sn":"058016000543464839373520000159",
+	 "sn":"404CCAAAD4E8A89860609800000149",
          "par":[[0,6,"536112000"],[1,6,"536112000"],[2,2,"1"],[3,2,"0"],[4,1,"30"],
                [5,1,"27"],[6,1,"25"],[7,1,"5"],[18,2,"2"],[19,2,"10"],[21,1,"0"],
                [23,2,"6"],[25,2,"15"],[26,1,"45"],[27,1,"5"],[28,2,"16"],[29,1,"0"],

@@ -1,4 +1,4 @@
-**Описание Hmarex API**
+**Описание Welrok local API**
 ========================
 
 `English version <../en/index.html>`_
