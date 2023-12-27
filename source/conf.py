@@ -24,9 +24,9 @@ copyright = 'Hmarex'
 author = 'hmarex'
 
 # The short X.Y version
-version = '2.5'
+version = '1'
 # The full version, including alpha/beta/rc tags
-release = '0'
+release = '1'
 
 
 # -- General configuration ---------------------------------------------------
