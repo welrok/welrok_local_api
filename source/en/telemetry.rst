@@ -66,5 +66,6 @@ Parameter groups:
 		* ``18`` - reserved
 		* ``19`` - reserved
 		* ``20`` - reserved
-		* ``21`` - problems with the zero crossing sensor
+		* ``21`` - zero crossing circuit
+
 
