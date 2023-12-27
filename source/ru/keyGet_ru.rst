@@ -12,7 +12,7 @@
 `Получение токена авторизации`
 ``````````````````````````````
 
-    **POST** `https://app.welrok.com/api/login/`
+    **POST** https://app.welrok.com/api/login/
 	
 .. code-block:: json
 	
