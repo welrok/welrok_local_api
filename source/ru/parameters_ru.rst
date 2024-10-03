@@ -85,8 +85,8 @@
    26       1 (int8)     upperLimit                 в °C, максимальное значение уставки пола
    27       1 (int8)     lowerLimit                 в °C, минимальное значение уставки пола
    28       2 (uint8)    maxSchedulePeriod          максимальное число периодов расписания в сутки
-   29       1 (int8)    tempTemperature            в °C, температура временного режима
-   31       1 (int8)    setTemperature			    в °C, температура уставки текущего режима (awayFloorTemperature | manualFloorTemperature | tempTemperature)
+   29       1 (int8)    tempTemperature             в °C, температура временного режима
+   31       1 (int8)    setTemperature	            в °C, температура уставки текущего режима (awayFloorTemperature | manualFloorTemperature | tempTemperature)
    33       1 (int8)     upperAirLimit              в °C, максимальное значение уставки воздуха
    34       1 (int8)     lowerAirLimit              в °C, минимальное значение уставки воздуха
    52       4 (uint16)   nightBrightStart           в минутах от 00:00, время начала ночного снижения яркости
@@ -104,4 +104,4 @@
    ======   ===========  =======================    ===========
 
 .. note::
-	Передаваемые температуры уставок ручного режима и отъезда не могут быть больше чем параметр 26 (upperLimit) и меньше чем параметр 27 (lowerLimit).
+Передаваемые температуры уставок ручного режима и отъезда не могут быть больше чем параметр 26 (upperLimit) и меньше чем параметр 27 (lowerLimit).
