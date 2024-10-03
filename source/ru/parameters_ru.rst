@@ -84,7 +84,7 @@
    25       2 (uint8)    propKoef                   в минутах включенной нагрузки в пределах 30 минутного цикла работы пропорционального режима
    26       1 (int8)     upperLimit                 в °C, максимальное значение уставки пола
    27       1 (int8)     lowerLimit                 в °C, минимальное значение уставки пола
-   28       2 (uint8)    maxSchedulePeriod          максимальное число периодов расписания в сутки
+   28       2 (uint8)    maxSchedulePeriod          максимальное число периодов расписания в сутки. Параметр "Read Only"
    29       1 (int8)     tempTemperature            в °C, температура временного режима
    31       1 (int8)     setTemperature	            в °C, температура уставки текущего режима (awayFloorTemperature | manualFloorTemperature | tempTemperature)
    33       1 (int8)     upperAirLimit              в °C, максимальное значение уставки воздуха
