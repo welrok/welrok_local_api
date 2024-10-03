@@ -96,7 +96,7 @@ In response, we receive an updated list of parameters:
    27       1 (int8)     lowerLimit                 in °C, min setting value of the floor temperature
    28       2 (uint8)    maxSchedulePeriod          max number of perioods per day
    29       1 (int8)     tempTemperature            in °C, temporary mode temperature
-   31       1 (int8)     setTemperature	            in °C, setting temperature of current mode (awayFloorTemperature | manualFloorTemperature | tempTemperature)
+   31       1 (int8)     setTemperature             in °C, setting temperature of current mode (awayFloorTemperature | manualFloorTemperature | tempTemperature)
    33       1 (int8)     upperAirLimit              in °C, max setting value of the air temperature
    34       1 (int8)     lowerAirLimit              in °C, min setting value of the air temperature
    52       4 (uint16)   nightBrightStart           in minutes from 00:00, night low bright start time
