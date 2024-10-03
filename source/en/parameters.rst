@@ -72,9 +72,9 @@ In response, we receive an updated list of parameters:
 .. table:: **Parameters list**
    :widths: auto
 
-   ======   ===========  =======================    ===========
+   ======   ===========  =======================    =========================================================================================================================
    Num      Type         Name                       Description
-   ======   ===========  =======================    ===========
+   ======   ===========  =======================    =========================================================================================================================
    0        6 (uint32)   startAwayTime              in seconds from 01.01.2000, away start time
    1        6 (uint32)   endAwayTime                in seconds from 01.01.2000, away end time
    2        2 (uint8)    mode                       mode: schedule=0, manual=1
@@ -111,4 +111,4 @@ In response, we receive an updated list of parameters:
    122      7 (bool)     windowOpenControl          open window control
    124      7 (bool)     childrenLock               children protect
    125      7 (bool)     powerOff                   power off
-   ======   ===========  =======================    ===========
+   ======   ===========  =======================    =========================================================================================================================
