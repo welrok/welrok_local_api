@@ -95,8 +95,8 @@ In response, we receive an updated list of parameters:
    26       1 (int8)     upperLimit                 in °C, max setting value of the floor temperature
    27       1 (int8)     lowerLimit                 in °C, min setting value of the floor temperature
    28       2 (uint8)    maxSchedulePeriod          max number of perioods per day
-   29       1 (int8)    tempTemperature            in °C, temporary mode temperature
-   31       1 (int8)    setTemperature			   in °C, setting temperature of current mode (awayFloorTemperature | manualFloorTemperature | tempTemperature)
+   29       1 (int8)     tempTemperature            in °C, temporary mode temperature
+   31       1 (int8)     setTemperature	            in °C, setting temperature of current mode (awayFloorTemperature | manualFloorTemperature | tempTemperature)
    33       1 (int8)     upperAirLimit              in °C, max setting value of the air temperature
    34       1 (int8)     lowerAirLimit              in °C, min setting value of the air temperature
    52       4 (uint16)   nightBrightStart           in minutes from 00:00, night low bright start time
@@ -106,7 +106,7 @@ In response, we receive an updated list of parameters:
    115      7 (bool)     cloudBlock                 cloud control block
    117      7 (bool)     NCContactControl           inverted relay
    118      7 (bool)     coolingControlWay          heat/cool mode
-   120      7 (bool)     useNightBright  	       activate using night bright
+   120      7 (bool)     useNightBright  	    activate using night bright
    121      7 (bool)     preControl                 preheat
    122      7 (bool)     windowOpenControl          open window control
    124      7 (bool)     childrenLock               children protect
