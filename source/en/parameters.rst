@@ -94,7 +94,7 @@ In response, we receive an updated list of parameters:
    25       2 (uint8)       propKoef                   in minutes when load on within 30-minutes cycle of the proportional mode
    26       1 (int8)        upperLimit                 in °C, max setting value of the floor temperature
    27       1 (int8)        lowerLimit                 in °C, min setting value of the floor temperature
-   28       2 (uint8)       maxSchedulePeriod          max number of perioods per day
+   28       2 (uint8)       maxSchedulePeriod          max number of perioods per day. Read Only 
    29       1 (int8)        tempTemperature            in °C, temporary mode temperature
    31       1 (int8)        setTemperature             in °C, setting temperature of current mode (awayFloorTemperature | manualFloorTemperature | tempTemperature)
    33       1 (int8)        upperAirLimit              in °C, max setting value of the air temperature
