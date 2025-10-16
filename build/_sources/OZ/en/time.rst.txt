@@ -1,0 +1,60 @@
+Time
+~~~~~~~~~~
+
+To retrieve the current time parameters from the device, use the request ``{"cmd": 3}``
+
+To change the time and time zone on the device, send the following request:
+
+.. code-block:: json
+
+   {
+     "sn": "404CCAAAD4E8A89860609800000149",
+     "time": "634929122",
+     "tzone": "3"
+   }
+
+``sn`` - device serial number
+
+``time`` - time in seconds since 01.01.2000 00:00
+
+``tzone`` - time zone
+
+To change the time zone without changing the time:
+
+.. code-block:: json
+
+   {
+     "sn": "404CCAAAD4E8A89860609800000149",
+     "tzone": "3"
+   }
+
+To change the time without changing the time zone:
+
+.. code-block:: json
+
+   {
+     "sn": "404CCAAAD4E8A89860609800000149",
+     "time": "634929122"
+   }
+
+.. note::
+	If changes via local network are locked (``lanBlock`` = **1**; ``bLc`` = **Lan**), you must include a computational token in the request:
+
+.. code-block:: json
+
+   {
+      "sn": "404CCAAAD4E8A89860609800000149",
+      "time": "634929122",
+      "tzone": "time zone",
+      "auth": "672201707"
+   }
+
+.. important::
+	If the time is set with a difference exceeding 24 hours, the telemetry parameter ``f21`` will be reset, and time synchronization with the cloud will be re-established.
+
+When setting the time using a command, synchronization between the device time and the cloud time is stopped. To restore time synchronization, you need to reset the device settings to their default values.
+
+.. note::
+   If the time is set ahead of the real time, a settings conflict may occur. The device will save the settings and schedule with the future time and will no longer accept settings and schedules from the server with the real time. If this happens, perform the following actions:
+	* simultaneously change the schedule setpoint in offline mode in the mobile app and in the web application
+	* simultaneously save the schedule on the device and in the web interface

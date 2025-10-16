@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Введение &#8212; Welrok 1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=27fed22d" />
+    <script src="../../_static/documentation_options.js?v=29a6c3e3"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="id1">
+<h1>Введение<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h1>
+<p>Для устройств Wi-Fi доступна опция прямого управления через локальную сеть. Обмен информацией осуществляется посредством POST запросов на <a class="reference external" href="http://">http://</a><code class="docutils literal notranslate"><span class="pre">dev_ip</span></code>/api.cgi, где <code class="docutils literal notranslate"><span class="pre">dev_ip</span></code> - ip адрес устройства в локальной сети. Для обнаружения новых устройств в локальной сети используются <a class="reference external" href="broadcast_ru.html">широковещательные</a> пакеты. Данные представлены в формате JSON.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Возможность управления по локальной сети без аутентификации по умолчанию <a class="reference external" href="safety_ru.html">заблокирована</a> в целях безопасности.</p>
+</div>
+<p>Доступны следующие ключи JSON:</p>
+<p><code class="docutils literal notranslate"><span class="pre">sn</span></code> - серийный номер устройства, обязателен при передаче новых параметров.</p>
+<p><code class="docutils literal notranslate"><span class="pre">cmd</span></code> - <a class="reference external" href="commands_ru.html">отправка команды</a> для получения данных от устройства (<a class="reference external" href="parameters_ru.html">параметры</a>, <a class="reference external" href="schedule_ru.html">расписание</a>, <a class="reference external" href="telemetry_ru.html">телеметрия</a>)</p>
+<p><code class="docutils literal notranslate"><span class="pre">par</span></code> - <a class="reference external" href="parameters_ru.html">изменение параметров устройства</a></p>
+<p><code class="docutils literal notranslate"><span class="pre">tt</span></code> - <a class="reference external" href="schedule_ru.html">передача расписания</a></p>
+<p><code class="docutils literal notranslate"><span class="pre">ttAir</span></code> - <a class="reference external" href="schedule_ru.html">передача расписания</a> при контроле по воздуху (воздуху с ограничением по полу), для устройств с датчиком воздуха</p>
+<p><code class="docutils literal notranslate"><span class="pre">time</span></code>, <code class="docutils literal notranslate"><span class="pre">auth</span></code> - <a class="reference external" href="safety_ru.html">аутентификация</a></p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Нельзя в одном запросе передавать расписание и параметры, а также несколько дней расписания.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>На устройстве существует страница <a class="reference external" href="http://">http://</a><code class="docutils literal notranslate"><span class="pre">dev_ip</span></code>/api.html, на которой можно проверить верность запросов и протестировать протокол обмена.
+Функция управления через API доступна так-же при работе утройства в режиме точки доступа. Для этого переведите устройство в режим «AP», подключитесь к нему и перейдите по ссылке: <a class="reference external" href="http://192.168.0.1/api.html">http://192.168.0.1/api.html</a></p>
+</div>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper"><!-- Стандартные элементы -->
+<h1 class="logo"><a href="../../index.html">Welrok</a></h1>
+
+
+
+<p class="blurb">Local API Documentation v1.0</p>
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+<div class="navigation-section"><h4><a href="javascript:history.back()" style="color: #666; text-decoration: none;">◀️ Назад</a></h4><h4>
+        <a href="index.html" style="color: inherit; text-decoration: none;">
+            📚 Навигация
+        </a>
+    </h4></div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, Welrok.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="../../_sources/OZ/ru/intro_ru.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

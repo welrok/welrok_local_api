@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Расписание &#8212; Welrok 1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=27fed22d" />
+    <script src="../../_static/documentation_options.js?v=29a6c3e3"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="id1">
+<h1>Расписание<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h1>
+<p>Для получения расписания конкретного устройства отправьте запрос <code class="docutils literal notranslate"><span class="pre">{&quot;cmd&quot;:2}</span></code>. Ответ:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">   </span><span class="nt">&quot;sn&quot;</span><span class="p">:</span><span class="s2">&quot;404CCAAAD4E8A89860609800000149&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">&quot;tt&quot;</span><span class="p">:{</span>
+<span class="w">      </span><span class="nt">&quot;0&quot;</span><span class="p">:[[</span><span class="mi">360</span><span class="p">,</span><span class="mi">300</span><span class="p">],[</span><span class="mi">480</span><span class="p">,</span><span class="mi">250</span><span class="p">],[</span><span class="mi">1020</span><span class="p">,</span><span class="mi">300</span><span class="p">],[</span><span class="mi">1320</span><span class="p">,</span><span class="mi">250</span><span class="p">]],</span>
+<span class="w">      </span><span class="nt">&quot;1&quot;</span><span class="p">:[[</span><span class="mi">360</span><span class="p">,</span><span class="mi">300</span><span class="p">],[</span><span class="mi">480</span><span class="p">,</span><span class="mi">250</span><span class="p">],[</span><span class="mi">1020</span><span class="p">,</span><span class="mi">300</span><span class="p">],[</span><span class="mi">1320</span><span class="p">,</span><span class="mi">250</span><span class="p">]],</span>
+<span class="w">      </span><span class="nt">&quot;2&quot;</span><span class="p">:[[</span><span class="mi">360</span><span class="p">,</span><span class="mi">300</span><span class="p">],[</span><span class="mi">480</span><span class="p">,</span><span class="mi">250</span><span class="p">],[</span><span class="mi">1020</span><span class="p">,</span><span class="mi">300</span><span class="p">],[</span><span class="mi">1320</span><span class="p">,</span><span class="mi">250</span><span class="p">]],</span>
+<span class="w">      </span><span class="nt">&quot;3&quot;</span><span class="p">:[[</span><span class="mi">360</span><span class="p">,</span><span class="mi">300</span><span class="p">],[</span><span class="mi">480</span><span class="p">,</span><span class="mi">250</span><span class="p">],[</span><span class="mi">1020</span><span class="p">,</span><span class="mi">300</span><span class="p">],[</span><span class="mi">1320</span><span class="p">,</span><span class="mi">250</span><span class="p">]],</span>
+<span class="w">      </span><span class="nt">&quot;4&quot;</span><span class="p">:[[</span><span class="mi">360</span><span class="p">,</span><span class="mi">300</span><span class="p">],[</span><span class="mi">480</span><span class="p">,</span><span class="mi">250</span><span class="p">],[</span><span class="mi">1020</span><span class="p">,</span><span class="mi">300</span><span class="p">],[</span><span class="mi">1320</span><span class="p">,</span><span class="mi">250</span><span class="p">]],</span>
+<span class="w">      </span><span class="nt">&quot;5&quot;</span><span class="p">:[[</span><span class="mi">480</span><span class="p">,</span><span class="mi">300</span><span class="p">],[</span><span class="mi">1380</span><span class="p">,</span><span class="mi">250</span><span class="p">]],</span>
+<span class="w">      </span><span class="nt">&quot;6&quot;</span><span class="p">:[[</span><span class="mi">480</span><span class="p">,</span><span class="mi">300</span><span class="p">],[</span><span class="mi">1380</span><span class="p">,</span><span class="mi">250</span><span class="p">]]</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">sn</span></code> - серийный номер устройства</p>
+<p><code class="docutils literal notranslate"><span class="pre">tt</span></code> - ключ обмена расписанием</p>
+<p><code class="docutils literal notranslate"><span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">2</span></code>, <code class="docutils literal notranslate"><span class="pre">3</span></code>, <code class="docutils literal notranslate"><span class="pre">4</span></code>, <code class="docutils literal notranslate"><span class="pre">5</span></code>, <code class="docutils literal notranslate"><span class="pre">6</span></code> - ключ номера дня недели, 0-понедельник.</p>
+<p>В качестве аргумента используется двумерный массив с минимум одним периодом. Максимальное количество периодов задаётся параметром <code class="docutils literal notranslate"><span class="pre">maxSchedulePeriod</span></code> всегда=16.</p>
+<dl class="simple">
+<dt>Каждый период состоит из пары значений:</dt><dd><ul class="simple">
+<li><p>количество минут с начала суток</p></li>
+<li><p>температура в градусах (<a href="#id2"><span class="problematic" id="id3">*</span></a>10)</p></li>
+</ul>
+</dd>
+<dt>Логика работы расписания следующая:</dt><dd><ul class="simple">
+<li><p>В рамках одного дня может быть не более 16 временных периодов</p></li>
+<li><p>Начало следующего периода является временем завершения предыдущего</p></li>
+</ul>
+</dd>
+</dl>
+<p>Например, в среду нужно установить 2 периода: 8:00 -&gt; 28C, 18:00 -&gt; 18C:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">   </span><span class="nt">&quot;sn&quot;</span><span class="p">:</span><span class="s2">&quot;404CCAAAD4E8A89860609800000149&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">&quot;tt&quot;</span><span class="p">:{</span>
+<span class="w">         </span><span class="nt">&quot;2&quot;</span><span class="p">:[[</span><span class="mi">480</span><span class="p">,</span><span class="mi">280</span><span class="p">],[</span><span class="mi">1080</span><span class="p">,</span><span class="mi">180</span><span class="p">]]</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>В этом случае, если мы не задавали вручную расписание на вторник, то:</dt><dd><ul class="simple">
+<li><p>С начала последнего периода вторника (в заводской настройке последний период вторник начинается с 1320 минуты и поддерживает температруру 25 °С) до 480 минуты среды будет поддерживаться температура +25 °С.</p></li>
+<li><p>С 480 минуты по 1080 минуту среды будет поддерживаться температура 28 °С</p></li>
+<li><p>С 1080 минуты до начала следующего периода четверга будет поддерживаться температура +18 °С</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Нельзя в одном запросе передавать несколько дней расписания.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Температура не может быть больше чем параметр 26 (upperLimit), меньше чем параметр 27 (lowerLimit).</p>
+</div>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper"><!-- Стандартные элементы -->
+<h1 class="logo"><a href="../../index.html">Welrok</a></h1>
+
+
+
+<p class="blurb">Local API Documentation v1.0</p>
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+<div class="navigation-section"><h4><a href="javascript:history.back()" style="color: #666; text-decoration: none;">◀️ Назад</a></h4><h4>
+        <a href="index.html" style="color: inherit; text-decoration: none;">
+            📚 Навигация
+        </a>
+    </h4></div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, Welrok.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="../../_sources/AZ/ru/schedule_ru.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

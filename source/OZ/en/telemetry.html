@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Telemetry &#8212; Welrok 1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=27fed22d" />
+    <script src="../../_static/documentation_options.js?v=29a6c3e3"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="telemetry">
+<h1>Telemetry<a class="headerlink" href="#telemetry" title="Link to this heading">¶</a></h1>
+<p>Telemetry is used to obtain the current state of device.
+To get telemetry, send command <code class="docutils literal notranslate"><span class="pre">{&quot;cmd&quot;:</span> <span class="pre">4}</span></code>, the answer for thermostat will be:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">   </span><span class="nt">&quot;sn&quot;</span><span class="p">:</span><span class="s2">&quot;404CCAAAD4E8A89860609800000149&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">&quot;t.0&quot;</span><span class="p">:</span><span class="s2">&quot;482&quot;</span><span class="p">,</span><span class="nt">&quot;t.1&quot;</span><span class="p">:</span><span class="s2">&quot;399&quot;</span><span class="p">,</span><span class="nt">&quot;t.2&quot;</span><span class="p">:</span><span class="s2">&quot;371&quot;</span><span class="p">,</span><span class="nt">&quot;t.5&quot;</span><span class="p">:</span><span class="s2">&quot;368&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">&quot;m.0&quot;</span><span class="p">:</span><span class="s2">&quot;2&quot;</span><span class="p">,</span><span class="nt">&quot;m.1&quot;</span><span class="p">:</span><span class="s2">&quot;3&quot;</span><span class="p">,</span><span class="nt">&quot;m.2&quot;</span><span class="p">:</span><span class="s2">&quot;1&quot;</span><span class="p">,</span><span class="nt">&quot;m.5&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="nt">&quot;m.6&quot;</span><span class="p">:</span><span class="s2">&quot;255&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">&quot;o.0&quot;</span><span class="p">:</span><span class="s2">&quot;-64&quot;</span><span class="p">,</span><span class="nt">&quot;o.1&quot;</span><span class="p">:</span><span class="s2">&quot;1&quot;</span><span class="p">,</span><span class="nt">&quot;o.5&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="nt">&quot;o.2&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="nt">&quot;o.4&quot;</span><span class="p">:</span><span class="s2">&quot;61&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">&quot;t.7&quot;</span><span class="p">:</span><span class="s2">&quot;692&quot;</span><span class="p">,</span><span class="nt">&quot;m.3&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="nt">&quot;f.3&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="nt">&quot;f.4&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="nt">&quot;f.5&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">&quot;f.6&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="nt">&quot;f.8&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="nt">&quot;f.7&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="nt">&quot;f.13&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="nt">&quot;f.0&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">&quot;f.17&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="nt">&quot;f.16&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="nt">&quot;f.9&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="nt">&quot;f.11&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="nt">&quot;f.12&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">&quot;f.20&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="nt">&quot;f.21&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="nt">&quot;f.22&quot;</span><span class="p">:</span><span class="s2">&quot;1&quot;</span><span class="p">,</span><span class="nt">&quot;f.23&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">&quot;par.26&quot;</span><span class="p">:</span><span class="s2">&quot;45&quot;</span><span class="p">,</span><span class="nt">&quot;par.27&quot;</span><span class="p">:</span><span class="s2">&quot;5&quot;</span><span class="p">,</span><span class="nt">&quot;par.33&quot;</span><span class="p">:</span><span class="s2">&quot;35&quot;</span><span class="p">,</span><span class="nt">&quot;par.34&quot;</span><span class="p">:</span><span class="s2">&quot;5&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">&quot;time&quot;</span><span class="p">:</span><span class="s2">&quot;799767684&quot;</span><span class="p">,</span><span class="nt">&quot;setPointStep&quot;</span><span class="p">:</span><span class="s2">&quot;0.5&quot;</span><span class="p">,</span><span class="nt">&quot;setPointType&quot;</span><span class="p">:</span><span class="s2">&quot;3&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">sn</span></code> - device serial number</p>
+<p><code class="docutils literal notranslate"><span class="pre">x.n</span></code> is the parameter key, where <code class="docutils literal notranslate"><span class="pre">x</span></code> is a group of parameters, <code class="docutils literal notranslate"><span class="pre">n</span></code> is the number in the group</p>
+<p><code class="docutils literal notranslate"><span class="pre">time</span></code> - device current time</p>
+<p><code class="docutils literal notranslate"><span class="pre">setPointStep</span></code> - setpoint step</p>
+<p><code class="docutils literal notranslate"><span class="pre">setPointType</span></code> - reserved</p>
+<dl class="simple">
+<dt>Parameter groups:</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">t</span></code> - temperature is 1/16 °C</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">0</span></code> - internal overheating sensor</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> - floor</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> - air (for devices with an air sensor)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3</span></code> - reserved</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">4</span></code> - reserved</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">5</span></code> - current setting</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">6</span></code> - reserved</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">7</span></code> - microcontroller temperature</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">m</span></code> - modes</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">0</span></code> - control type: floor = 0, air = 1, air mode with floor limitation = 2</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> - Operation mode: schedule = 0, expectation = 1, manual = 3, away = 4, temporary = 5, timer = 6</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> - the number of the current schedule period (the schedule uses all 7 days of the week, each containing up to 16 periods. Accordingly, if the schedule uses all 16 periods every day, the value can range from 0 (representing the first period on Monday) to 111 (representing the last period on Sunday). The example given shows the maximum possible value. There can be fewer periods; for example, if using 2 periods per day, the value range will be from 0 (the first period on Monday) to 13 (the last period on Sunday)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3</span></code> - blocking type: no blocking = 0, blocking changes from the cloud = 1, blocking changes from the local network = 2, both = 3</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">4</span></code> - reserved</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">5</span></code> - heating mode (0 - heating, 1 - cooling)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">6</span></code> - next mode — the mode the device will switch to upon exiting the current timer, away, or waiting mode: = scheduled = 0, expectation = 1, manual = 3, away = 4, temporary = 5, timer = 6. For all other modes = 255 (undefined)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">o</span></code> - other parameters</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">0</span></code> - Wi-Fi signal strength in dBm (-127..128)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> - the reason for the last reboot: 9 - software reboot due to low MK supply voltage; 3 - software reboot; 1 - power reset.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> - timer remaining (to get the time in seconds, the value must be multiplied by 5)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">4</span></code> - humidity in % (air sensor data)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">5</span></code> - reason for reboot WCH: WCH reset cause: Other reasons = 0, Reset = 3, Software failure = 4</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">par</span></code> - duplication of some device parameters</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">n</span></code> - parameter number</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">te</span></code> - extra temperatures</p></li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">f</span></code> - bit parameters</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">0</span></code> - load status: 0 - disabled, 1 - enabled</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> - reserved</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> - floor limit action (for devices with air sensor)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3</span></code> - floor sensor break: 0 - no break, 1 - break</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">4</span></code> - floor sensor short circuit: 0 - no short circuit, 1 - short circuit</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">5</span></code> - air sensor loss: 0 - no loss, 1 - loss (for devices with air sensor)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">6</span></code> - reserved</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">7</span></code> - preheat function action: 0 - disabled, 1 - enabled</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">8</span></code> - open window function action: 0 - disabled, 1 - enabled</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">9</span></code> - internal overheating: 0 - no overheating, 1 - overheating</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">10</span></code> - time synchronization issue: 0 - thermostat time matches cloud time, 1 - thermostat time doesn’t match cloud time</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">11</span></code> - time flow issue: 0 - thermostat time counts correctly (not lagging), 1 - thermostat time counts incorrectly (lagging)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">12</span></code> - overheating protection (internal device temperature monitoring circuit): 0 - no error (working correctly), 1 - error (overheating protection not working)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">13</span></code> - proportional load operation mode (emergency operation without floor temperature sensor): 0 - disabled, 1 - enabled</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">14</span></code> - digital floor sensor used: 0 - not used, 1 - used</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">15</span></code> - reserved</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">16</span></code> - device power off: 0 - enabled, 1 - disabled</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">17</span></code> - long load operation time: 0 - no notification, 1 - notification present</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">18</span></code> - reserved</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">19</span></code> - reserved</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">20</span></code> - zero-crossing detection circuit error: 0 - no error, 1 - error</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">21</span></code> - cloud time ignoring: 0 - not ignoring, 1 - ignoring</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">22</span></code> - air sensor connection: 0 - not connected, 1 - connected</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">23</span></code> - air sensor battery status: 0 - battery OK, 1 - low battery</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper"><!-- Стандартные элементы -->
+<h1 class="logo"><a href="../../index.html">Welrok</a></h1>
+
+
+
+<p class="blurb">Local API Documentation v1.0</p>
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+<div class="navigation-section"><h4><a href="javascript:history.back()" style="color: #666; text-decoration: none;">◀️ Назад</a></h4><h4>
+        <a href="index.html" style="color: inherit; text-decoration: none;">
+            📚 Навигация
+        </a>
+    </h4></div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, Welrok.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="../../_sources/OZ/en/telemetry.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

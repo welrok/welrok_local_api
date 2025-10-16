@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Поиск устройств &#8212; Welrok 1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=27fed22d" />
+    <script src="../../_static/documentation_options.js?v=29a6c3e3"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="id1">
+<h1>Поиск устройств<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h1>
+<p>Для получения списка доступных устройств в локальной сети используются широковещательные UDP пакеты. Каждое устройство после подключения к сети несколько раз в минуту посылает UDP пакет на порт 23500 с JSON данными вида:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">   </span><span class="nt">&quot;sn&quot;</span><span class="p">:</span><span class="s2">&quot;404CCAAAD4E8A89860609800000149&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">&quot;hw&quot;</span><span class="p">:</span><span class="s2">&quot;az&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">&quot;cloud&quot;</span><span class="p">:</span><span class="s2">&quot;true&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">&quot;connection&quot;</span><span class="p">:</span><span class="s2">&quot;cloudCon&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">&quot;wifi&quot;</span><span class="p">:</span><span class="s2">&quot;-71&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">&quot;display&quot;</span><span class="p">:</span><span class="s2">&quot;23.0&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">sn</span></code> - серийный номер устройства</p>
+<p><code class="docutils literal notranslate"><span class="pre">hw</span></code> - модель устройства</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">cloud</span></code> - параметр подключения к облаку. Может возвращать:</dt><dd><ul class="simple">
+<li><p>true - подключено к облаку</p></li>
+<li><p>false - не подключено к облаку.</p></li>
+</ul>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">connection</span></code> - состояние подключения к облаку. Может возвращать значения:</dt><dd><ul class="simple">
+<li><p>wiFiCon - подключено к сети Wi-Fi</p></li>
+<li><p>tcpCon, helloCon, readyCon, sslCon - осуществляется подключение к облаку</p></li>
+<li><p>cloudCon - подключено к облаку</p></li>
+<li><p>APMode - устройство в режиме точки доступа</p></li>
+<li><p>changeState - осуществляется переключение между режимами</p></li>
+</ul>
+</dd>
+</dl>
+<p><code class="docutils literal notranslate"><span class="pre">wifi</span></code> - уровень сигнала Wi-Fi в dBm</p>
+<p><code class="docutils literal notranslate"><span class="pre">display</span></code> - показание дисплея устройства на момент запроса</p>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper"><!-- Стандартные элементы -->
+<h1 class="logo"><a href="../../index.html">Welrok</a></h1>
+
+
+
+<p class="blurb">Local API Documentation v1.0</p>
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+<div class="navigation-section"><h4><a href="javascript:history.back()" style="color: #666; text-decoration: none;">◀️ Назад</a></h4><h4>
+        <a href="index.html" style="color: inherit; text-decoration: none;">
+            📚 Навигация
+        </a>
+    </h4></div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, Welrok.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="../../_sources/Old/ru/broadcast_ru.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

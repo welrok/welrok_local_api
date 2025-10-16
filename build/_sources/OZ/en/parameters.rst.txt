@@ -1,0 +1,132 @@
+Parameters list
+~~~~~~~~~~~~~~~
+
+To get all available parameters of the device send command ``{"cmd":1}``, for example answer for *oz* thermostat:
+
+.. code-block:: json
+
+    {
+     "sn":"404CCAAAD4E8A89860609800000149",
+     "par":[[64,6,"0"],[65,3,"300"],[23,2,"10"],
+           [114,7,"0"],[115,7,"0"],[29,3,"0"],
+           [66,6,"0"],[67,6,"0"],[0,6,"0"],[1,6,"0"],
+           [2,2,"1"],[31,3,"230"],[3,2,"2"],[19,2,"10"],
+           [18,2,"2"],[21,1,"0"],[5,3,"300"],[7,3,"50"],
+           [109,7,"1"],[80,1,"0"],[81,1,"0"],[82,1,"0"],
+           [25,2,"15"],[26,1,"45"],[27,1,"5"],[33,1,"35"],
+           [34,1,"5"],[28,2,"16"],[17,4,"0"],[52,4,"0"],
+           [53,4,"480"],[62,1,"35"],[63,1,"5"],[55,2,"24"],
+           [20,1,"0"],[4,3,"230"],[6,3,"180"],[14,1,"0"],
+           [15,1,"45"],[122,7,"0"],[35,2,"1"],[36,7,"1"],
+           [117,7,"0"],[118,7,"0"],[121,7,"0"],[124,7,"0"],
+           [125,7,"0"],[120,7,"0"]]
+    }
+
+``sn`` - device serial number
+
+``par`` - parameter exchange key
+
+Transfer format is an array of arrays. The first value is number of the parameter, the second its type, the third is string with the parameter value.
+
+For example, turn on the device and set floor temperature in manual mode to 27 °C (device menu item ``bLc`` = 0FF, blocking is disabled):
+
+.. code-block:: json
+
+    {
+     "sn":"404CCAAAD4E8A89860609800000149",
+     "par":[[125,7,"0"],[5,1,"27"]]
+    }
+
+.. note::
+The floor sensor temperature in the device's user menu and via API changes in 1 °C increments over the entire operating range. The air sensor temperature in the device's user menu changes in 1 °C increments in the range from -15 °C to -10 °C, in 0.5 °C increments in the range from -10 °C to 75 °C (for devices with an air sensor). The air sensor temperature when controlled via API changes in 0.1 °C increments over the entire operating range (for devices with an air sensor).
+
+.. important::
+   When changing device parameters, the command must contain the key ``sn``
+
+.. table:: **Data types**
+   :widths: auto   
+
+   === =====
+   Num Type
+   === =====
+   0   CStringType
+   1   int8
+   2   uint8
+   3   int16
+   4   uint16
+   5   int32
+   6   uint32
+   7   bool
+   === =====
+
+
+
+
+.. table:: **Parameters list**
+   :widths: auto
+   
+   ======   ===========  =======================    =========================================================================================================================
+   Num      Type         Name                       Description
+   ======   ===========  =======================    =========================================================================================================================
+   0        6 (uint32)   startAwayTime              in seconds from 01.01.2000, away start time
+   1        6 (uint32)   endAwayTime                in seconds from 01.01.2000, away end time
+   2        2 (uint8)    mode                       mode: schedule=0, manual=1
+   3        2 (uint8)    controlType                control tupe: by floor=0, (by air=1, air mode with floor limitation=2 - for devices with an air sensor) 
+   5        1 (int8)     manualFloorTemperature     in °C, manual mode temperature by floor
+   6        1 (int8)     awayAirTemperature         in °C, temperature mode away by air (for devices with an air sensor)
+   7        1 (int8)     awayFloorTemperature       in °C, temperature mode away by floor
+   14       2 (uint8)    minTempAdvancedMode        in °C, minimum floor temperature limitation in air mode with floor limitation (for devices with air sensor)
+   15       2 (uint8)    maxTempAdvancedMode        in °C, maximum floor temperature limitation in air mode with floor limitation (for devices with an air sensor)
+   17       4 (uint16)   power                      in a.e., P=(power<=150)?(power*10):(1500+power*20), connected power
+   18       2 (uint8)    sensorType                 type of connected temperature sensor: 4,7kOhm=0, 6,8kOhm=1, 10kOhm=2, 12kOhm=3, 15kOhm=4, 33kOhm=5, 47kOhm=6
+   19       2 (uint8)    histeresis                 in 1/10 °C, hysteresis
+   20       1 (int8)     airCorrection              in 1/10 °C, air temperature sensor correction (for devices with an air sensor)
+   21       1 (int8)     floorCorrection            in 1/10 °C, floor temperature sensor correction
+   23       2 (uint8)    brightness                 in a.e. (from 0 to 9) or (from 0 to 10) brightness 
+   25       2 (uint8)    propKoef                   in minutes when load on within 30-minutes cycle of the proportional mode
+   26       1 (int8)     upperLimit                 in °C, max setting value of the floor temperature
+   27       1 (int8)     lowerLimit                 in °C, min setting value of the floor temperature
+   28       2 (uint8)    maxSchedulePeriod          max number of perioods per day. Read Only 
+   29       1 (int8)     tempTemperature            in °C, temporary mode temperature
+   31       1 (int8)     setTemperature             in °C, setting temperature of current mode (awayFloorTemperature | manualFloorTemperature | tempTemperature)
+   33       1 (int8)     upperAirLimit              in °C, max setting value of the air temperature (for devices with an air sensor)
+   34       1 (int8)     lowerAirLimit              in °C, min setting value of the air temperature (for devices with an air sensor)
+   52       4 (uint16)   nightBrightStart           in minutes from 00:00, night low bright start time
+   53       4 (uint16)   nightBrightEnd             in minutes from 00:00, night low bright end time
+   109      7 (bool)     offButtonLock              disable automatic lock of touch buttons (Read-only)	
+   114      7 (bool)     lanBlock                   local newort control block
+   115      7 (bool)     cloudBlock                 cloud control block
+   117      7 (bool)     NCContactControl           inverted relay
+   118      7 (bool)     coolingControlWay          heat/cool mode
+   120      7 (bool)     useNightBright             activate using night bright
+   121      7 (bool)     preControl                 preheat
+   122      7 (bool)     windowOpenControl          open window control
+   124      7 (bool)     childrenLock               children protect
+   125      7 (bool)     powerOff                   power off
+   ======   ===========  =======================    =========================================================================================================================
+
+.. note::
+	Parameters 29 and 31, in scheduled and timed operation modes, can take the values 127 and -127, which correspond to the setting values **on** (the load is always on) and **off** (the load is always off) in the graphical interface and on the device display.
+
+.. table:: 
+   :widths: auto
+   
+   ======   =============   =================================================================================
+   Num      Type            Description
+   ======   =============   =================================================================================
+   35       2 (uint8)       in minutes, air sensor polling frequency (1-60) (for devices with an air sensor)
+   36       7 (bool)        wireless air sensor connected (Read-only) (for devices with an air sensor)
+   55       2 (uint8)       in hours, continuous heating time for emergency alert (Read-only)
+   62       1 (int8)        in °C, upper temperature threshold for alarm
+   63       1 (int8)        in °C, lower temperature threshold for alarm
+   64       6 (uint32)      n seconds from 01.01.2000 00:00, time of end of timer (in GMT)
+   65       3 (int16)       in °C*10, timer mode temperature setting
+   66       6 (uint32)      in seconds from 01.01.2000 00:00, departure start time (in GMT)
+   67       6 (uint32)      in seconds from 01.01.2000 00:00, departure end time (in GMT)
+   80       1 (int8)        Correction of sensitivity of key sensors from -30 to 30
+   81       1 (int8)        Correction of sensitivity of key sensors from -30 to 30
+   82       1 (int8)        Correction of sensitivity of key sensors from -30 to 30
+   ======   =============   =================================================================================
+
+.. note::
+   Setpoints for all modes must fit within limits 26 and 27 during floor operation, and within limits 33 and 34 during air operation.

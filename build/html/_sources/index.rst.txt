@@ -1,8 +1,8 @@
-Select language
-~~~~~~~~~~~~~~~~
-
+Select device
+~~~~~~~~~~~~~
 .. toctree::
-	:maxdepth: 2
+	:maxdepth: 1
 
-	English <en/index>
-	Русский <ru/index>
+	Текущая документация <Old/index>
+	AZ <AZ/index>
+	OZ 3cc3 <OZ/index>

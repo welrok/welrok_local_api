@@ -1,0 +1,8 @@
+Select language
+~~~~~~~~~~~~~~~~
+
+.. toctree::
+	:maxdepth: 1
+
+	English <en/index>
+	Русский <ru/index>

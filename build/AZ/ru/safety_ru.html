@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Безопасность &#8212; Welrok 1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="id1">
+<h1>Безопасность<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<p>Реализована возможность управления с включенной блокировкой изменений по локальной сети (<code class="docutils literal notranslate"><span class="pre">lanBlock</span></code> = <strong>1</strong>; <code class="docutils literal notranslate"><span class="pre">bLc</span></code> = <strong>Lan</strong>).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Если включены обе блокировки (параметры <code class="docutils literal notranslate"><span class="pre">lanBlock</span></code> = <strong>1</strong> и <code class="docutils literal notranslate"><span class="pre">cloudBlock</span></code> = <strong>1</strong>; пункт меню <code class="docutils literal notranslate"><span class="pre">bLc</span></code> = <strong>on</strong>),
+то устройство заблокировано полностью, управление возможно только с кнопок.</p>
+</div>
+<p>Для аутентификации источника при отправке команд на устройство используется TOTP протокол (<strong>rfc4226</strong>, <strong>rfc6238</strong>, Interval = 30 second, Digit = 9).
+Для этого необходимо добавить два поля перед полями с данными:</p>
+<p><code class="docutils literal notranslate"><span class="pre">time</span></code> - время в секундах от 01.01.2000 00:00</p>
+<p><code class="docutils literal notranslate"><span class="pre">auth</span></code> - вычисленный токен.</p>
+<blockquote>
+<div><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w"> </span><span class="nt">&quot;sn&quot;</span><span class="p">:</span><span class="s2">&quot;404CCAAAD4E8A89860609800000149&quot;</span><span class="p">,</span>
+<span class="w"> </span><span class="nt">&quot;time&quot;</span><span class="p">:</span><span class="s2">&quot;634929122&quot;</span><span class="p">,</span>
+<span class="w"> </span><span class="nt">&quot;auth&quot;</span><span class="p">:</span><span class="s2">&quot;672201707&quot;</span><span class="p">,</span>
+<span class="w"> </span><span class="nt">&quot;par&quot;</span><span class="p">:[[</span><span class="mi">125</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="s2">&quot;0&quot;</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">23</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;1&quot;</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">114</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="s2">&quot;1&quot;</span><span class="p">]]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Ключ для генерации токена можно получить через <a class="reference external" href="keyGet_ru.html">АПИ сервера</a>.</p>
+<p>Если нет необходимости использовать аутентификацию, то для управления по локальной сети необходимо отключить блокировку.</p>
+<p>Просмотреть статус блокировки можно в телеметрии - ключ <code class="docutils literal notranslate"><span class="pre">m.3</span></code>, в настройках - параметр <code class="docutils literal notranslate"><span class="pre">lanBlock</span></code> или в меню - пункт <code class="docutils literal notranslate"><span class="pre">bLc</span></code>.</p>
+<p>Отключается блокировка через меню устройства - параметр <code class="docutils literal notranslate"><span class="pre">bLc</span></code> надо изменить на <strong>oFF</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>В 2-х кнопочных устройствах для этого надо удерживать левую кнопку до появления меню <code class="docutils literal notranslate"><span class="pre">reg</span></code>. Нажатием левой кнопки перейти в пункт меню <code class="docutils literal notranslate"><span class="pre">bLc</span></code>. Нажатием правой кнопки выбрать пункт <strong>oFF</strong></p></li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>На странице <code class="docutils literal notranslate"><span class="pre">index.html</span></code> доступна функция подключения устройства к облаку <code class="docutils literal notranslate"><span class="pre">API</span></code> <code class="docutils literal notranslate"><span class="pre">CLOUD</span></code>. Если пункт <code class="docutils literal notranslate"><span class="pre">CLOUD</span></code> включен, связь устройства с облаком активна. Если пункт <code class="docutils literal notranslate"><span class="pre">CLOUD</span></code> выключен, связь устройства с облаком отсутствует.</p>
+</div>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">Welrok</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2025, Welrok.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 6.2.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="../../_sources/AZ/ru/safety_ru.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
