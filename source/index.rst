@@ -2,7 +2,7 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: _templates/Old.png
-       :scale: 20 %
+       :scale: 40 %
        :align: left
        :alt: Welrok oz без датчика воздуха (до июня 2025)/without air sensor (until June 2025)
        :target: lang_old.html
@@ -17,7 +17,7 @@
 
        Welrok az  
 .. figure:: _templates/OZ.png
-       :scale: 40 %
+       :scale: 20 %
        :align: left
        :alt: Welrok oz с датчиком воздуха (от июня 2025)/with air sensor (since June 2025)
        :target: lang_oz.html
