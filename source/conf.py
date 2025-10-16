@@ -10,7 +10,6 @@ project = 'Welrok'
 copyright = '2025, Welrok'
 author = 'Welrok'
 release = '1'
-version: 3
 
 
 # -- General configuration ---------------------------------------------------
