@@ -1,0 +1,32 @@
+<!-- Стандартные элементы -->
+{%- include "about.html" %}
+{%- include "searchbox.html" %}
+
+<div class="navigation-section">
+    {%- if pagename != 'index' -%}
+    <h4><a href="javascript:history.back()" style="color: #666; text-decoration: none;">◀️ Назад</a></h4>
+    {%- endif -%}
+    {%- if pagename != 'index' and not pagename in ['lang_az', 'lang_old', 'lang_oz', 'Old/en/index', 'Old/ru/index', 'AZ/en/index', 'AZ/ru/index', 'OZ/en/index', 'OZ/ru/index'] -%}
+    <h4>
+        <a href="
+        {%- if pagename == 'Old/ru' -%}
+            Old/ru/index.html
+        {%- elif pagename == 'Old/en' -%}
+            Old/en/index.html
+        {%- elif pagename == 'AZ/en' -%}
+            AZ/en/index.html
+        {%- elif pagename == 'AZ/ru' -%}
+            AZ/ru/index.html
+        {%- elif pagename == 'OZ/en' -%}
+            OZ/en/index.html
+        {%- elif pagename == 'OZ/en' -%}
+            OZ/en/index.html
+        {%- else -%}
+            index.html
+        {%- endif -%}
+        " style="color: inherit; text-decoration: none;">
+            📚 Навигация
+        </a>
+    </h4>
+    {%- endif -%}
+</div>
