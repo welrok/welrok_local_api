@@ -29,7 +29,7 @@ html_static_path = ['_static']
 # НАСТРОЙКИ БОКОВОЙ ПАНЕЛИ
 html_theme_options = {
     'logo_name': 'Welrok API',
-    'description': 'Local API Documentation v1.0',
+    'description': 'Local API Documentation v2.0',
 }
 templates_path = ['_templates']
 html_sidebars = {
