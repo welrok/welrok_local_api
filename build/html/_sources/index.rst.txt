@@ -1,8 +1,0 @@
-Select device
-~~~~~~~~~~~~~
-.. toctree::
-	:maxdepth: 1
-
-	Текущая документация <Old/index>
-	AZ <AZ/index>
-	OZ 3cc3 <OZ/index>
