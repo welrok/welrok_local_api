@@ -1,6 +1,9 @@
 Parameters list
 ~~~~~~~~~~~~~~~
 
+.. Important::
+   The ability to manage over a local network without a security token is `blocked <safety.html>`_ by default for security reasons. This may be relevant, for example, when using local control in public places. If this security measure is not needed, disable it on the device by setting the ``bLc`` parameter to **oFF**. Otherwise, requests for changes without this token will not be executed.
+
 To retrieve the set of all available parameters for a specific device, send the request {"cmd":1}. The response for an OZ thermostat without an air sensor, manufactured before June 2025, is:
 
 .. code-block:: json

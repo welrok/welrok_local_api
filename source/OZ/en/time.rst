@@ -6,7 +6,32 @@ Time
 
 To retrieve the current time parameters from the device, use the request ``{"cmd": 3}`` `Command <comands.html>`_.
 
-To change the time on the device, send the following request:
+To change the time and time zone on the device, send the following request:
+
+.. code-block:: json
+
+   {
+      "sn": "404CCAAAD4E8A89860609800000149",
+      "time": "634929122",
+      "tzone": "3"
+   }
+
+``sn`` - device serial number
+
+``time`` - time in seconds since 01.01.2000 00:00
+
+``tzone`` - time zone
+
+To change the time zone without changing the time:
+
+.. code-block:: json
+
+   {
+      "sn": "404CCAAAD4E8A89860609800000149",
+      "tzone": "3"
+   }
+
+To change the time without changing the time zone:
 
 .. code-block:: json
 
@@ -14,10 +39,6 @@ To change the time on the device, send the following request:
       "sn": "404CCAAAD4E8A89860609800000149",
       "time": "634929122"
    }
-
-``sn`` - device serial number
-
-``time`` - time in seconds since 01.01.2000 00:00
 
 .. note::
    If changes via local network are locked (``lanBlock`` = **1**; ``bLc`` = **Lan**), you must include a TOTP token «auth» (see `Safety <safety.html>`_):
@@ -27,10 +48,14 @@ To change the time on the device, send the following request:
    {
       "sn": "404CCAAAD4E8A89860609800000149",
       "time": "634929122",
+      "tzone": "time zone",
       "auth": "672201707"
    }
 
-When setting the time via command, the time synchronization between the device and the cloud is disabled. To restore time synchronization, reset the device to factory defaults (refer to the device manual).
+.. important::
+   If the time is set with a difference exceeding 24 hours, the telemetry parameter ``f21`` will be reset, and time synchronization with the cloud will be re-established.
+
+When setting the time using a command, synchronization between the device time and the cloud time is stopped. To restore time synchronization, you need to reset the device settings to their default values (see device user manual).
 
 .. note::
 

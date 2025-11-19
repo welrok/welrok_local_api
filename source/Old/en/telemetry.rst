@@ -2,6 +2,10 @@ Telemetry
 ~~~~~~~~~
 
 Telemetry is used to obtain the current state of device.
+
+.. Important::
+   The ability to manage over a local network without a security token is `blocked <safety.html>`_ by default for security reasons. This may be relevant, for example, when using local control in public places. If this security measure is not needed, disable it on the device by setting the ``bLc`` parameter to **oFF**. Otherwise, requests for changes without this token will not be executed.
+
 To get telemetry, send command ``{"cmd": 4}``, for example, the answer for az thermostat will be:
 
 .. code-block:: json

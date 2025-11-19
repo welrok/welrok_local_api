@@ -1,6 +1,10 @@
 **MQTT**
 ========
 
+.. note::
+   The device additionally implements the ability to block operation through the Welrok cloud. This block is controlled by the `parameter <parameters.html>`_ ``cloudBlock`` 115 = **1** or from the page http://``dev_ip``, where ``dev_ip`` is the device's IP address on the local network.
+   If both blocks are enabled simultaneously via the `parameters <parameters.html>`_ ``lanBlock`` 114 = **1** and ``cloudBlock`` 115 = **1**, or the device menu item ``bLc`` = **on**, then the device is completely locked for remote control. Control is only possible via the buttons.
+
 There's a possibility to collect telemetry and manage some parameters via MQTT protocol.
 MQTT server connection settings are available only via the device web-interface, which is available at its local IP address:
 

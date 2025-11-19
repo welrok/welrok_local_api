@@ -10,7 +10,6 @@
    Device search <broadcast>
    Command <commands>
    Safety <safety>
-   Key get <keyGet>
    MQTT <mqtt>
 
 .. toctree::

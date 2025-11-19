@@ -1,10 +1,10 @@
-Schedule
-~~~~~~~~
+Расписание
+~~~~~~~~~~
 
 .. Important::
    The ability to manage over a local network without a security token is `blocked <safety.html>`_ by default for security reasons. This may be relevant, for example, when using local control in public places. If this security measure is not needed, disable it on the device by setting the ``bLc`` parameter to **oFF**. Otherwise, requests for changes without this token will not be executed.
 
-To get all schedule of the device send command ``{"cmd":2}``. Answer:
+To get all schedule of the device send command ``{"cmd":2}`` - for floor control, or ``{"cmd":10}`` - for air and advanced mode control (for devices with an air sensor). For example answer for *oz* thermostat:
 
 .. code-block:: json
 
@@ -23,15 +23,15 @@ To get all schedule of the device send command ``{"cmd":2}``. Answer:
 
 ``sn`` - device serial number
 
-``tt`` - schedule exchange key 
+``tt`` - schedule exchange key for control type "By floor", ``ttAir`` - schedule exchange key for control type "By air" or "By air with floor limit".
 
-``0``, ``1``, ``2``, ``3``, ``4``, ``5``, ``6`` - day number key, 0-monday. 
+``0``, ``1``, ``2``, ``3``, ``4``, ``5``, ``6`` - ключ номера дня недели, 0-понедельник. 
 
-A two-dimensional array with a minimum of one period is used as the argument. The maximum number of periods is set by the parameter maxSchedulePeriod, which is always 16.
+A two-dimensional array with at least one period is used as an argument. The maximum number of periods for one day is set by the ``maxSchedulePeriod`` parameter always=16.
 
-Each period consists of pair of values:
-  * Number of minutes from the start of the day
-  * Temperature in degrees (*10)
+Each period consists of pairs of values:
+  * number of minutes since the beginning of the day
+  * temperature in degrees (*10)
 
 The schedule logic is as follows:
   * A single day can have no more than 16 time periods.
@@ -54,9 +54,10 @@ In this case, if we did not manually set the schedule for Tuesday, then:
   * From minute 1080 until the start of the next period on Thursday, a temperature of +18°C will be maintained.
 
 .. important::
-   It is not allowed to send schedules for multiple days in a single request.
+   It is impossible to transfer several days of the schedule in one request.
 
 .. note::
-   The temperature cannot be greater than parameter 26 (upperLimit) or less than parameter 27 (lowerLimit)
+   The temperature cannot be greater than parameter 26 (upperLimit), less than parameter 27 (lowerLimit) for the floor and greater than parameter 33 (upperAirLimit), less than parameter 34 (lowerAirLimit) for the air (for devices with an air sensor).
 
-
+.. note::
+   Parameters 29 and 31, in scheduled and timed operation modes, can take the values 127 and -127, which correspond to the setting values **on** (the load is always on) and **off** (the load is always off) in the graphical interface and on the device display.

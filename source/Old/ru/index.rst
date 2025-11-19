@@ -10,7 +10,6 @@
    Поиск устройств <broadcast_ru>
    Команды <commands_ru>
    Безопасность <safety_ru>
-   Получение ключа <keyGet_ru>
    MQTT <mqtt_ru>
 
 .. toctree::
