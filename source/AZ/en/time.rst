@@ -32,6 +32,25 @@ To change the time on the device, send the following request:
 
 When setting the time via command, the time synchronization between the device and the cloud is disabled. To restore time synchronization, reset the device to factory defaults (refer to the device manual).
 
+.. note:: 
+   If the device is bound and has time obtained from the HTTP API, cloud-provided time is applied only if the current time is more than 24 hours ahead of or behind the timestamp received via the HTTP API.
+   
+   Timezone recalculation occurs upon receiving time via NTP. 
+   
+   If the timezone received from the cloud does not match the computed one, an error is logged—provided less than 24 hours have passed since the time was received via the HTTP API.
+   
+   If the device is unbound, has no time from Android, and has not received NTP time, it defaults to UTC using the firmware compilation timestamp, and the "invalid time" flag is set.
+   
+   If the device is bound, has no time from Android, and has not received NTP time, it defaults to UTC using the firmware compilation timestamp, and the "invalid time" flag is set.
+   
+   If the device is unbound, has no time from Android, but receives NTP time, it operates in UTC, and the "invalid time" flag is set.
+   
+   If the device is unbound and receives time from Android, it calculates and stores its own timezone, and the "invalid time" flag is cleared.
+   
+   If the device is bound, has no time from Android, but receives NTP time, it operates using the stored timezone, and the "invalid time" flag is cleared.
+   
+   If the device is bound and receives time from Android, it accepts both the time and timezone from Android, and the "invalid time" flag is cleared
+
 .. note::
 
    Setting the device time to a value earlier than the current device time may cause a configuration conflict.
