@@ -1,4 +1,4 @@
-Device search
+MS: Device search
 ~~~~~~~~~~~~~
 
 To obtain a list of available devices on the local network UDP broadcast packets are used. After connecting to the network several times per minute, each device sends a UDP packet to port 23500 with JSON data like:
@@ -11,7 +11,7 @@ To obtain a list of available devices on the local network UDP broadcast packets
       "cloud":"true",
       "connection":"cloudCon",
       "wifi":"-71",
-      "display":"23.0"
+      "display":"error"
    }
 
 

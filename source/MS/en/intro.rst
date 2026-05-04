@@ -1,4 +1,4 @@
-﻿Introduction
+﻿MS Introduction
 ~~~~~~~~~~~~
 
 For Wi-Fi devices direct control via a local network is available. Information is exchanged through POST requests at http://``dev_ip``/api.cgi, where ``dev_ip`` is the ip address of the device on the local network. To detect new devices on the local network `broadcast <broadcast.html>`_ packets is used. Data is presented in JSON format.

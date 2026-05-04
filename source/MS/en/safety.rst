@@ -1,4 +1,4 @@
-Security
+MS: Security
 ~~~~~~~~
 
 The ability to manage over a local network without a "security token" is blocked by default. This may be relevant, for example, when using local control in public places. The security token must be added to all change requests. The requirement for a security token in requests is determined by the `parameter <parameters.html>`_ ``lanBlock`` 114 = **1** or in the thermostat menu by the item ``bLc`` = **Lan**. To disable this requirement, change the `parameter <parameters.html>`_ ``lanBlock`` 114 to **0** or in the thermostat menu select **oFF** for the ``bLc`` item.

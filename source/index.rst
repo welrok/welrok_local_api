@@ -30,4 +30,4 @@
        :alt: Welrok ms
        :target: lang_ms.html
 
-       Welrok ms  
+       Welrok MS  

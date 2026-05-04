@@ -1,4 +1,4 @@
-﻿**Welrok local API reference**
+﻿**Welrok MS local API reference**
 ===============================
 
 `Русская версия <../ru/index.html>`_

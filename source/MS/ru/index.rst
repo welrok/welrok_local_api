@@ -1,4 +1,4 @@
-**Описание Welrok local API**
+**Описание Welrok MS local API**
 ============================================================================
 
 `English version <../en/index.html>`_
