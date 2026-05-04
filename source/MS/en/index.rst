@@ -1,0 +1,21 @@
+﻿**Welrok local API reference**
+===============================
+
+`Русская версия <../ru/index.html>`_
+
+.. toctree::
+   :maxdepth: 3
+
+   Introduction <intro>
+   Device search <broadcast>
+   Command <commands>
+   Safety <safety>
+   MQTT <mqtt>
+
+.. toctree::
+   :hidden:
+   :caption: Подразделы команд:
+
+   Parameters <parameters>
+   Telemetry <telemetry>
+   Working with time <time>

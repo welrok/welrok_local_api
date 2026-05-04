@@ -23,3 +23,11 @@
        :target: lang_oz.html
 
        Welrok oz с датчиком воздуха (от июня 2025)/with air sensor (since June 2025)
+
+.. figure:: _templates/MS.png
+       :scale: 40 %
+       :align: left
+       :alt: Welrok ms
+       :target: lang_ms.html
+
+       Welrok ms  

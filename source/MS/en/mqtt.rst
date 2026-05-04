@@ -1,0 +1,51 @@
+**MQTT**
+========
+
+.. note::
+   The device additionally implements the ability to block operation through the Welrok cloud. This block is controlled by the `parameter <parameters.html>`_ ``cloudBlock`` 115 = **1** or from the page http://``dev_ip``, where ``dev_ip`` is the device's IP address on the local network.
+   If both blocks are enabled simultaneously via the `parameters <parameters.html>`_ ``lanBlock`` 114 = **1** and ``cloudBlock`` 115 = **1**, or the device menu item ``bLc`` = **on**, then the device is completely locked for remote control. Control is only possible via the buttons.
+
+There's a possibility to collect telemetry and manage some parameters via MQTT protocol.
+MQTT server connection settings are available only via the device web-interface, which is available at its local IP address:
+
+``Host``/``Port`` - IP address and port of the MQTT server
+
+``User``/``Password`` - username and password to connect
+
+``Keep alive`` - the maximum allowed period of time without data exchange
+
+``QoS`` - quality of service level
+
+``Publish prefix`` - publication prefix for sending telemetry
+
+``Subscribe path`` - name of the way to subscribe to commands
+
+``Client ID`` - device name
+
+.. note::
+   If no authorization is configured on the MQTT server, the ``User``/ ``Password`` fields are ignored.
+
+.. important::
+   The maximum length of the ``User`` name and ``Password`` is 30 characters
+
+.. rubric:: **PUBLISHED TOPICS**
+
+Published every minute with an interval of +/- 5 seconds in the following topics:
+
+``Publish prefix``/``Client ID``/``get``/``parameters`` - parameters request, executed similarly to API command in `parameters <parameters.html>`_. ``{"cmd":1}``
+
+``Publish prefix``/``Client ID``/``get``/``telemetry`` - telemetry request, executed similarly to the API command in `parameters <parameters_ru.html>`_. ``{"cmd":3}``
+
+``Publish prefix``/``Client ID``/``get``/``api`` - response to set/api command sending
+
+.. rubric:: **CONTROL TOPICS**
+
+The following topics are available for control:
+
+.. note:: 
+   After sending a control command, an out-of-turn data publication occurs after 3-5 seconds.
+
+``Subscribe path``/``Client ID``/``set``/``parameters`` - parameters setting. Command transmission is performed similarly to API command in `parameters <parameters.html>`_ by sending JSON containing device sn and two-dimensional array with required parameters, their type and value.
+
+``Subscribe path``/``Client ID``/``set``/``api`` - duplicates webApi functionality, allowing to send commands in API format.
+
