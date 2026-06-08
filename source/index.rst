@@ -16,6 +16,7 @@
        :target: lang_az.html
 
        Welrok az  
+
 .. figure:: _templates/OZ.png
        :scale: 53 %
        :align: left
@@ -31,3 +32,12 @@
        :target: lang_ms.html
 
        Welrok MS  
+
+
+.. figure:: _templates/BASE+.png
+       :scale: 40 %
+       :align: left
+       :alt: Система защиты от протечек. / Welrok BASE+. Water Leak Protection System.
+       :target: lang_BASE+.html
+
+       Welrok BASE+. Система защиты от протечек. / Welrok BASE+. Water Leak Protection System.

@@ -7,7 +7,8 @@
 	<h4><a href="javascript:history.back()" style="color: #666; text-decoration: none;">◀️ Назад</a></h4>
 	{%- endif -%}
 	{%- if pagename != 'index' and not pagename in ['lang_az', 'lang_old', 'lang_oz', 'Old/en/index', 'Old/ru/index',
-	'AZ/en/index', 'AZ/ru/index', 'OZ/en/index', 'OZ/ru/index', 'MS/en/index', 'MS/ru/index'] -%}
+	'AZ/en/index', 'AZ/ru/index', 'OZ/en/index', 'OZ/ru/index', 'MS/en/index', 'MS/ru/index', 'BASE+/en/index',
+	'BASE+/ru/index'] -%}
 	<h4>
 		<a href="
         {%- if pagename == 'Old/ru' -%}
@@ -26,6 +27,10 @@
             MS/en/index.html
         {%- elif pagename == 'MS/ru' -%}
             MS/ru/index.html
+        {%- elif pagename == 'BASE+/ru' -%}
+            BASE+/ru/index.html
+		{%- elif pagename == 'BASE+/en' -%}
+            BASE+/en/index.html	
         {%- else -%}
             index.html
         {%- endif -%}
