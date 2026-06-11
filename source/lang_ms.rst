@@ -1,4 +1,4 @@
-Выберете язык / Select language
+Выберите язык / Select language
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. toctree::

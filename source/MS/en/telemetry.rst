@@ -35,7 +35,7 @@ Parameter groups:
       * ``0`` - Wi-Fi signal level in dBm (-127..128)
       * ``1`` - reason for the last reboot. Depending on the hardware platform version, two types of values may be returned. The first is a hexadecimal mask, interpreted as: power off = 0x04, software reset = 0x08, watchdog timer = 0x10, low voltage = 0x40. The second is a direct value: software reboot due to low MCU supply voltage = 9; software reboot = 3; power reset = 1.
       * ``5`` - WCH reboot reason: 0 reboot via NRST pin, 1 via power, 2 software reboot, 3 independent watchdog, 4 window watchdog, 5 brownout
-   * ``par`` - duplication of some `parameters <parameters_ru.html>`_ of the device
+   * ``par`` - duplication of some `parameters <parameters.html>`_ of the device
       * ``n`` - parameter number
    * ``f`` - bit parameters
       * ``0`` - internal overheat: 0 - no overheat: 1 - overheat

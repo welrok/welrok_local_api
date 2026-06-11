@@ -8,7 +8,7 @@
 	{%- endif -%}
 	{%- if pagename != 'index' and not pagename in ['lang_az', 'lang_old', 'lang_oz', 'Old/en/index', 'Old/ru/index',
 	'AZ/en/index', 'AZ/ru/index', 'OZ/en/index', 'OZ/ru/index', 'MS/en/index', 'MS/ru/index', 'BASE+/en/index',
-	'BASE+/ru/index'] -%}
+	'BASE+/ru/index', 'D2W/en/index', 'D2W/ru/index'] -%}
 	<h4>
 		<a href="
         {%- if pagename == 'Old/ru' -%}
@@ -30,7 +30,11 @@
         {%- elif pagename == 'BASE+/ru' -%}
             BASE+/ru/index.html
 		{%- elif pagename == 'BASE+/en' -%}
-            BASE+/en/index.html	
+            BASE+/en/index.html
+		{%- elif pagename == 'D2W/en' -%}
+            D2W/en/index.html
+        {%- elif pagename == 'D2W/ru' -%}
+            D2W/ru/index.html
         {%- else -%}
             index.html
         {%- endif -%}

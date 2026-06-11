@@ -89,7 +89,7 @@ In response, we receive an updated list of parameters:
    0        6(uint32)       startAwayTime              in seconds from 01.01.2000, away start time
    1        6(uint32)       endAwayTime                in seconds from 01.01.2000, away end time
    2        2(uint8)        mode                       mode: schedule=0, manual=3
-   3        2(uint8)        controlType                control tupe: by floor=0
+   3        2(uint8)        controlType                control type: by floor=0
    5        1(int8)         manualFloorTemperature     in °C, manual mode temperature by floor
    6        1(int8)         awayAirTemperature         in °C, temperature mode away by air
    7        1(int8)         awayFloorTemperature       in °C, temperature mode away by floor

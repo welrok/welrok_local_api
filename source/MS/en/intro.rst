@@ -10,7 +10,7 @@ JSON keys are available:
 
 ``sn`` - the serial number of the device, required when transferring new data into device.
 
-``cmd`` - `send command <comands.html>`_ to receive data from the device (`parameters <parameters.html>`_, `telemetry <telemetry.html>`_)
+``cmd`` - `send command <commands.html>`_ to receive data from the device (`parameters <parameters.html>`_, `telemetry <telemetry.html>`_)
 
 ``par`` - `change device parameters <parameters.html>`_
 

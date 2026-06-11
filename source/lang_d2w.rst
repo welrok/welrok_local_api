@@ -4,5 +4,5 @@
 .. toctree::
 	:maxdepth: 1
 
-	English <Old/en/index>
-	Русский <Old/ru/index>
+	English <D2W/en/index>
+	Русский <D2W/ru/index>

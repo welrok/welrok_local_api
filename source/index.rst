@@ -1,4 +1,4 @@
-Выберете устройство / Select device first
+Выберите устройство / Select device first
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: _templates/Old.png
@@ -18,7 +18,7 @@
        Welrok az  
 
 .. figure:: _templates/OZ.png
-       :scale: 53 %
+       :scale: 40 %
        :align: left
        :alt: Welrok oz с датчиком воздуха (от июня 2025)/with air sensor (since June 2025)
        :target: lang_oz.html
@@ -33,7 +33,6 @@
 
        Welrok MS  
 
-
 .. figure:: _templates/BASE+.png
        :scale: 40 %
        :align: left
@@ -41,3 +40,11 @@
        :target: lang_BASE+.html
 
        Welrok BASE+. Система защиты от протечек. / Welrok BASE+. Water Leak Protection System.
+
+.. figure:: _templates/D2W.png
+       :scale: 40 %
+       :align: left
+       :alt: Welrok D2W
+       :target: lang_D2W.html
+
+       Welrok D2W  
