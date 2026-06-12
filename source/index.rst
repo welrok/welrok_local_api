@@ -45,6 +45,6 @@
        :scale: 40 %
        :align: left
        :alt: Welrok D2W
-       :target: lang_D2W.html
+       :target: lang_d2w.html
 
        Welrok D2W  
