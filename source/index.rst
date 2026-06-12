@@ -1,50 +1,56 @@
 Выберите устройство / Select device first
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. figure:: _templates/Old.png
-       :scale: 40 %
-       :align: left
-       :alt: Welrok oz без датчика воздуха (до июня 2025)/without air sensor (until June 2025)
-       :target: lang_old.html
 
-       Welrok oz без датчика воздуха (до июня 2025)/without air sensor (until June 2025)
+.. list-table::
+   :widths: 30 70
+   :header-rows: 0
+   :class: top-aligned
 
-.. figure:: _templates/AZ.png
-       :scale: 40 %
-       :align: left
-       :alt: Welrok az
-       :target: lang_az.html
+   * - .. image:: _templates/AZ.png
+          :scale: 40 %
+          :alt: Welrok az
+          :target: lang_az.html
+          :class: align-center
 
-       Welrok az  
+     - Welrok az
 
-.. figure:: _templates/OZ.png
-       :scale: 40 %
-       :align: left
-       :alt: Welrok oz с датчиком воздуха (от июня 2025)/with air sensor (since June 2025)
-       :target: lang_oz.html
+   * - .. image:: _templates/Old.png
+          :scale: 40 %
+          :alt: Welrok oz без датчика воздуха (до июня 2025)
+          :target: lang_old.html
+          :class: align-center
 
-       Welrok oz с датчиком воздуха (от июня 2025)/with air sensor (since June 2025)
+     - Welrok oz без датчика воздуха (до июня 2025)
 
-.. figure:: _templates/MS.png
-       :scale: 40 %
-       :align: left
-       :alt: Welrok ms
-       :target: lang_ms.html
+   * - .. image:: _templates/OZ.png
+          :scale: 40 %
+          :alt: Welrok oz с датчиком воздуха (от июня 2025)
+          :target: lang_oz.html
+          :class: align-center
 
-       Welrok MS  
+     - Welrok oz с датчиком воздуха (от июня 2025)
 
-.. figure:: _templates/BASE+.png
-       :scale: 40 %
-       :align: left
-       :alt: Система защиты от протечек. / Welrok BASE+. Water Leak Protection System.
-       :target: lang_BASE+.html
+   * - .. image:: _templates/MS.png
+          :scale: 40 %
+          :alt: Welrok MS
+          :target: lang_ms.html
+          :class: align-center
 
-       Welrok BASE+. Система защиты от протечек. / Welrok BASE+. Water Leak Protection System.
+     - Welrok MS
 
-.. figure:: _templates/D2W.png
-       :scale: 40 %
-       :align: left
-       :alt: Welrok D2W
-       :target: lang_d2w.html
+   * - .. image:: _templates/BASE+.png
+          :scale: 40 %
+          :alt: Welrok BASE+. Система защиты от протечек.
+          :target: lang_BASE+.html
+          :class: align-center
 
-       Welrok D2W  
+     - Welrok BASE+. Система защиты от протечек.
+
+   * - .. image:: _templates/D2W.png
+          :scale: 40 %
+          :alt: Welrok D2W
+          :target: lang_d2w.html
+          :class: align-center
+
+     - Welrok D2W

@@ -1,3 +1,4 @@
 sphinx
 urllib3
 sphinxcontrib-httpdomain
+furo

@@ -9,7 +9,8 @@
 project = 'Welrok'
 copyright = '2025, Welrok'
 author = 'Welrok'
-release = '1'
+release = ''
+html_title = 'Welrok Local API'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -24,16 +25,6 @@ exclude_patterns = []
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = 'alabaster'
+html_theme = 'furo'
 html_static_path = ['_static']
-# НАСТРОЙКИ БОКОВОЙ ПАНЕЛИ
-html_theme_options = {
-    'logo_name': 'Welrok API',
-    'description': 'Local API Documentation v2.0',
-}
-templates_path = ['_templates']
-html_sidebars = {
-    '**': [
-        'sidebar.html',  # ТОЛЬКО наш кастомный шаблон
-    ]
-}
+html_add_permalinks = ""
