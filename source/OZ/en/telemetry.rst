@@ -45,7 +45,7 @@ Parameter groups:
       * ``7`` - microcontroller temperature      
    * ``m`` - modes
       * ``0`` - control type: floor = 0, air = 1, air mode with floor limitation = 2
-      * ``1`` - Operation mode: schedule = 0, expectation = 1, manual = 3, away = 4, temporary = 5, timer = 6
+      * ``1`` - Operation mode: schedule = 0, stand by mode = 1, manual = 3, away = 4, temporary = 5, timer = 6
       * ``2`` - the number of the current schedule period (the schedule uses all 7 days of the week, each containing up to 16 periods. Accordingly, if the schedule uses all 16 periods every day, the value can range from 0 (representing the first period on Monday) to 111 (representing the last period on Sunday). The example given shows the maximum possible value. There can be fewer periods; for example, if using 2 periods per day, the value range will be from 0 (the first period on Monday) to 13 (the last period on Sunday)
       * ``3`` - blocking type: no blocking = 0, blocking changes from the cloud = 1, blocking changes from the local network = 2, both = 3
       * ``4`` - reserved
