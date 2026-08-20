@@ -23,6 +23,7 @@ sys.path.insert(0, os.path.abspath('_ext'))
 extensions = [
     'myst_parser',
     'markdown_export',
+    'sphinx_markdown_builder'
 ]
 
 # Настройка для поддержки файлов .md на входе (если пишете документацию в MD)
