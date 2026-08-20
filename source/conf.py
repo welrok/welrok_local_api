@@ -15,9 +15,14 @@ html_title = 'Welrok Local API'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
+import os
+import sys
+
+sys.path.insert(0, os.path.abspath('_ext'))
+
 extensions = [
     'myst_parser',
-    'sphinx_markdown_builder'
+    'markdown_export',
 ]
 
 # Настройка для поддержки файлов .md на входе (если пишете документацию в MD)
@@ -38,3 +43,13 @@ exclude_patterns = []
 html_theme = 'furo'
 html_static_path = ['_static']
 html_add_permalinks = ""
+html_sidebars = {
+    "**": [
+        "sidebar/brand.html",
+        "sidebar/search.html",
+        "sidebar/markdown_export.html",
+        "sidebar/scroll-start.html",
+        "sidebar/navigation.html",
+        "sidebar/scroll-end.html",
+    ]
+}

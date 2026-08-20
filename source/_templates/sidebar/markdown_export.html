@@ -1,0 +1,20 @@
+{%- if markdown_export_available or combined_markdown_export_available -%}
+<div class="sidebar-tree">
+  <ul>
+    {%- if markdown_export_available -%}
+    <li class="toctree-l1">
+      <a class="reference internal" href="{{ markdown_export_url }}" download>
+        {{ markdown_export_label }}
+      </a>
+    </li>
+    {%- endif -%}
+    {%- if combined_markdown_export_available -%}
+    <li class="toctree-l1">
+      <a class="reference internal" href="{{ combined_markdown_export_url }}" download>
+        {{ combined_markdown_export_label }}
+      </a>
+    </li>
+    {%- endif -%}
+  </ul>
+</div>
+{%- endif -%}

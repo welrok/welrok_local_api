@@ -3,4 +3,3 @@ urllib3
 sphinxcontrib-httpdomain
 furo
 myst-parser
-sphinx-markdown-builder
