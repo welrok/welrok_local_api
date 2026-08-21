@@ -156,6 +156,35 @@ def toctree_pages(doctree, env) -> list[str]:
     return pages
 
 
+def ordered_combined_pages(pagename: str, pages: list[str]) -> list[str]:
+    page_set = set(pages)
+    base_dir = pagename.replace("\\", "/").rsplit("/", 1)[0]
+    language = page_language(pagename)
+    suffix = "_ru" if language == "ru" else ""
+    preferred_slugs = [
+        f"intro{suffix}",
+        f"broadcast{suffix}",
+        f"commands{suffix}",
+        f"parameters{suffix}",
+        f"telemetry{suffix}",
+        f"time{suffix}",
+        f"safety{suffix}",
+        f"mqtt{suffix}",
+    ]
+
+    ordered = [
+        f"{base_dir}/{slug}"
+        for slug in preferred_slugs
+        if f"{base_dir}/{slug}" in page_set
+    ]
+    remaining = [
+        page
+        for page in pages
+        if page not in ordered and page.rsplit("/", 1)[-1] not in {"schedule", "schedule_ru"}
+    ]
+    return ordered + remaining
+
+
 class CombinedMarkdownWriter:
     def __init__(self, app, index_pagename: str):
         self.app = app
@@ -164,7 +193,10 @@ class CombinedMarkdownWriter:
     def write(self, title: str) -> str:
         lines = [f"# {title}", ""]
         index_doctree = self.app.env.get_doctree(self.index_pagename).deepcopy()
-        for pagename in toctree_pages(index_doctree, self.app.env):
+        pages = ordered_combined_pages(
+            self.index_pagename, toctree_pages(index_doctree, self.app.env)
+        )
+        for pagename in pages:
             doctree = self.app.env.get_doctree(pagename).deepcopy()
             remove_navigation_nodes(doctree)
             page_markdown = MarkdownWriter(self.app, pagename).write(

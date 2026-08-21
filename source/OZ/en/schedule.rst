@@ -1,5 +1,5 @@
-Расписание
-~~~~~~~~~~
+Schedule
+~~~~~~~~
 
 .. Important::
    The ability to manage over a local network without a security token is `blocked <safety.html>`_ by default for security reasons. This may be relevant, for example, when using local control in public places. If this security measure is not needed, disable it on the device by setting the ``bLc`` parameter to **oFF**. Otherwise, requests for changes without this token will not be executed.
@@ -25,13 +25,13 @@ To get all schedule of the device send command ``{"cmd":2}`` - for floor control
 
 ``tt`` - schedule exchange key for control type "By floor", ``ttAir`` - schedule exchange key for control type "By air" or "By air with floor limit".
 
-``0``, ``1``, ``2``, ``3``, ``4``, ``5``, ``6`` - ключ номера дня недели, 0-понедельник. 
+``0``, ``1``, ``2``, ``3``, ``4``, ``5``, ``6`` - day-of-week keys, where 0 is Monday.
 
 A two-dimensional array with at least one period is used as an argument. The maximum number of periods for one day is set by the ``maxSchedulePeriod`` parameter always=16.
 
 Each period consists of pairs of values:
   * number of minutes since the beginning of the day
-  * temperature in degrees (*10)
+  * temperature in degrees multiplied by 10
 
 The schedule logic is as follows:
   * A single day can have no more than 16 time periods.

@@ -63,6 +63,11 @@ SOURCE_DIR = Path(__file__).resolve().parent
 
 def language_switch(pagename):
     """Return the sibling language page for the current document."""
+    if pagename == "index":
+        return {"label": "English version", "target": "index_en"}
+    if pagename == "index_en":
+        return {"label": "Русская версия", "target": "index"}
+
     if "/ru/" in pagename:
         target = pagename.replace("/ru/", "/en/", 1)
         candidates = []
@@ -71,7 +76,7 @@ def language_switch(pagename):
             candidates.extend([base, f"{base}_en"])
         else:
             candidates.append(target)
-        label = "En"
+        label = "English version"
     elif "/en/" in pagename:
         target = pagename.replace("/en/", "/ru/", 1)
         candidates = []
@@ -80,7 +85,7 @@ def language_switch(pagename):
             candidates.extend([f"{base}_ru", base])
         else:
             candidates.extend([f"{target}_ru", target])
-        label = "Ru"
+        label = "Русская версия"
     else:
         return None
 
@@ -93,6 +98,7 @@ def language_switch(pagename):
 
 def add_language_switch(app, pagename, templatename, context, doctree):
     context["language_switch"] = language_switch(pagename)
+    context["current_language"] = "en" if pagename == "index_en" or "/en/" in pagename else "ru"
 
 
 def setup(app):
