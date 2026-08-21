@@ -1,8 +1,6 @@
 **Welrok Base+ Modbus reference**
 ============================================================================
 
-`Russian version <../ru/index.html>`_
-
 .. toctree::
    :maxdepth: 3
 

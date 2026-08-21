@@ -1,8 +1,8 @@
-Выберите язык / Select language
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Welrok AZ: выберите язык / select language
+==========================================
 
 .. toctree::
-	:maxdepth: 1
+   :maxdepth: 1
 
-	English <AZ/en/index>
-	Русский <AZ/ru/index>
+   Русский <AZ/ru/index>
+   English <AZ/en/index>

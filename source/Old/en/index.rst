@@ -1,8 +1,6 @@
 ﻿**Welrok local API reference**
 ===============================
 
-`Русская версия <../ru/index.html>`_
-
 .. toctree::
    :maxdepth: 3
 
@@ -20,3 +18,4 @@
    Schedule <schedule>
    Telemetry <telemetry>
    Working with time <time>
+   Security key getting <keyGet>

@@ -1,8 +1,6 @@
 **Описание Welrok MS local API**
 ============================================================================
 
-`English version <../en/index.html>`_
-
 .. toctree::
    :maxdepth: 3
 
@@ -19,3 +17,4 @@
    Параметры <parameters_ru>
    Телеметрия <telemetry_ru>
    Работа с временем <time_ru>
+   Получение ключа безопасности <keyGet_ru>

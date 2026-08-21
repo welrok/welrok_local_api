@@ -1,8 +1,8 @@
-Select language
-~~~~~~~~~~~~~~~~
+Welrok BASE+: выберите язык / select language
+=============================================
 
 .. toctree::
-	:maxdepth: 1
+   :maxdepth: 1
 
-	English <BASE+/en/index>
-	Русский <BASE+/ru/index>
+   Русский <BASE+/ru/index>
+   English <BASE+/en/index>

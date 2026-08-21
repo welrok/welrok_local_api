@@ -1,8 +1,6 @@
 **Описание Welrok Base+ Modbus**
 ============================================================================
 
-`English version <../en/index.html>`_
-
 .. toctree::
    :maxdepth: 3
 

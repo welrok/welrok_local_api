@@ -1,8 +1,6 @@
 ﻿**Welrok local API reference**
 ===============================
 
-`Русская версия <../ru/index.html>`_
-
 .. toctree::
    :maxdepth: 3
 

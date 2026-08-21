@@ -1,8 +1,8 @@
-Выберите язык / Select language
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Welrok D2W: выберите язык / select language
+===========================================
 
 .. toctree::
-	:maxdepth: 1
+   :maxdepth: 1
 
-	English <D2W/en/index>
-	Русский <D2W/ru/index>
+   Русский <D2W/ru/index>
+   English <D2W/en/index>

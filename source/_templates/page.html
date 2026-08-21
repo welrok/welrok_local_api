@@ -1,0 +1,10 @@
+{% extends "!page.html" %}
+
+{% block content %}
+  {% if language_switch %}
+    <div class="language-switch">
+      <a href="{{ pathto(language_switch.target) }}">{{ language_switch.label }}</a>
+    </div>
+  {% endif %}
+  {{ super() }}
+{% endblock %}

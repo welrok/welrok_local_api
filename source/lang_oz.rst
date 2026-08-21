@@ -1,8 +1,8 @@
-Select language
-~~~~~~~~~~~~~~~~
+Welrok OZ: выберите язык / select language
+==========================================
 
 .. toctree::
-	:maxdepth: 1
+   :maxdepth: 1
 
-	English <OZ/en/index>
-	Русский <OZ/ru/index>
+   Русский <OZ/ru/index>
+   English <OZ/en/index>

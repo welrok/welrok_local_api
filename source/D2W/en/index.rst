@@ -1,8 +1,6 @@
 ﻿**Welrok D2W local API reference**
 ===============================
 
-`Русская версия <../ru/index.html>`_
-
 .. toctree::
    :maxdepth: 3
 
@@ -19,3 +17,4 @@
    Parameters <parameters>
    Telemetry <telemetry>
    Working with time <time>
+   Security key getting <keyGet>

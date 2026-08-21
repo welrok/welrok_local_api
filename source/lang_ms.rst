@@ -1,8 +1,8 @@
-Выберите язык / Select language
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Welrok MS: выберите язык / select language
+==========================================
 
 .. toctree::
-	:maxdepth: 1
+   :maxdepth: 1
 
-	English <MS/en/index>
-	Русский <MS/ru/index>
+   Русский <MS/ru/index>
+   English <MS/en/index>

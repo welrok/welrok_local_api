@@ -10,6 +10,12 @@ if "%SPHINXBUILD%" == "" (
 set SOURCEDIR=source
 set BUILDDIR=build
 
+if "%1" == "check-translations" (
+	python tools\check_translations.py
+	if errorlevel 9009 py -3 tools\check_translations.py
+	goto end
+)
+
 %SPHINXBUILD% >NUL 2>NUL
 if errorlevel 9009 (
 	echo.

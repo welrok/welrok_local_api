@@ -1,8 +1,6 @@
 **Описание Welrok local API**
 ============================================================================
 
-`English version <../en/index.html>`_
-
 .. toctree::
    :maxdepth: 3
 

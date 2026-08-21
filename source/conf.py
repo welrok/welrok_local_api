@@ -17,6 +17,7 @@ html_title = 'Welrok Local API'
 
 import os
 import sys
+from pathlib import Path
 
 sys.path.insert(0, os.path.abspath('_ext'))
 
@@ -43,6 +44,7 @@ exclude_patterns = []
 
 html_theme = 'furo'
 html_static_path = ['_static']
+html_css_files = ['language-switch.css']
 html_add_permalinks = ""
 html_sidebars = {
     "**": [
@@ -54,3 +56,44 @@ html_sidebars = {
         "sidebar/scroll-end.html",
     ]
 }
+
+
+SOURCE_DIR = Path(__file__).resolve().parent
+
+
+def language_switch(pagename):
+    """Return the sibling language page for the current document."""
+    if "/ru/" in pagename:
+        target = pagename.replace("/ru/", "/en/", 1)
+        candidates = []
+        if target.endswith("_ru"):
+            base = target[:-3]
+            candidates.extend([base, f"{base}_en"])
+        else:
+            candidates.append(target)
+        label = "En"
+    elif "/en/" in pagename:
+        target = pagename.replace("/en/", "/ru/", 1)
+        candidates = []
+        if target.endswith("_en"):
+            base = target[:-3]
+            candidates.extend([f"{base}_ru", base])
+        else:
+            candidates.extend([f"{target}_ru", target])
+        label = "Ru"
+    else:
+        return None
+
+    for candidate in candidates:
+        if (SOURCE_DIR / f"{candidate}.rst").exists():
+            return {"label": label, "target": candidate}
+
+    return None
+
+
+def add_language_switch(app, pagename, templatename, context, doctree):
+    context["language_switch"] = language_switch(pagename)
+
+
+def setup(app):
+    app.connect("html-page-context", add_language_switch)
