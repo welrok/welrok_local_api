@@ -1,7 +1,7 @@
 Welrok Local API
 ================
 
-Выберите устройство и язык документации.
+Выберите устройство.
 
 .. list-table::
    :widths: 28 72
@@ -17,7 +17,7 @@ Welrok Local API
           :target: D2W/ru/index.html
           :class: align-center
 
-       Welrok D2W
+       `Welrok D2W <D2W/ru/index.html>`__
 
      - Реле напряжения: защита нагрузки, мониторинг сети, MQTT и HTTP API для интеграций.
 
@@ -27,7 +27,7 @@ Welrok Local API
           :target: MS/ru/index.html
           :class: align-center
 
-       Welrok MS
+       `Welrok MS <MS/ru/index.html>`__
 
      - Мастер-выключатель: централизованное управление питанием, MQTT, HTTP API и внешняя кнопка.
 
@@ -37,7 +37,7 @@ Welrok Local API
           :target: OZ/ru/index.html
           :class: align-center
 
-       Welrok OZ
+       `Welrok OZ <OZ/ru/index.html>`__
 
      - Терморегулятор с датчиком пола и выносным BLE-датчиком воздуха, расписанием, MQTT и HTTP API.
 
@@ -47,7 +47,7 @@ Welrok Local API
           :target: BASE+/ru/index.html
           :class: align-center
 
-       Welrok BASE+
+       `Welrok BASE+ <BASE+/ru/index.html>`__
 
      - Модуль защиты от протечек: датчики протечки, поддержка Modbus RTU по RS485.
 
@@ -57,9 +57,9 @@ Welrok Local API
           :target: Old/ru/index.html
           :class: align-center
 
-       Welrok OZ old
+       `Welrok OZ old <Old/ru/index.html>`__
 
-     - Предыдущая версия OZ без датчика воздуха: расписание, MQTT и HTTP API для интеграций.
+     - Предыдущая версия OZ без датчика воздуха, выпускалась до июня 2025: расписание, MQTT и HTTP API для интеграций.
 
    * - .. image:: _templates/AZ.png
           :scale: 32 %
@@ -67,7 +67,7 @@ Welrok Local API
           :target: AZ/ru/index.html
           :class: align-center
 
-       Welrok AZ
+       `Welrok AZ <AZ/ru/index.html>`__
 
      - Терморегулятор с одним датчиком пола: управление теплым полом, расписание, MQTT и HTTP API.
 
@@ -79,5 +79,6 @@ Welrok Local API
    MS <lang_ms>
    OZ <lang_oz>
    BASE+ <lang_BASE+>
-   Old <lang_old>
+   OZ old <lang_old>
    AZ <lang_az>
+   English version <index_en>

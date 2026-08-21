@@ -31,7 +31,7 @@ A two-dimensional array with a minimum of one period is used as the argument. Th
 
 Each period consists of pair of values:
   * Number of minutes from the start of the day
-  * Temperature in degrees (*10)
+  * Temperature in degrees (\*10)
 
 The schedule logic is as follows:
   * A single day can have no more than 16 time periods.

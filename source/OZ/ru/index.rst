@@ -9,12 +9,3 @@
    Команды <commands_ru>
    Безопасность <safety_ru>
    MQTT <mqtt_ru>
-
-.. toctree::
-   :hidden:
-   :caption: Подразделы команд:
-   
-   Параметры <parameters_ru>
-   Расписание <schedule_ru>
-   Телеметрия <telemetry_ru>
-   Работа с временем <time_ru>

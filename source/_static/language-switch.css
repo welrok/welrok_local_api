@@ -1,21 +1,21 @@
-.language-switch {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 0.75rem;
+.sidebar-language-switch {
+  margin: -0.35rem 1rem 0.75rem;
 }
 
-.language-switch a {
+.sidebar-language-switch a {
   border: 1px solid var(--color-background-border);
   border-radius: 0.375rem;
   color: var(--color-foreground-primary);
+  display: block;
   font-size: 0.875rem;
   font-weight: 600;
-  line-height: 1;
+  line-height: 1.2;
   padding: 0.45rem 0.65rem;
+  text-align: center;
   text-decoration: none;
 }
 
-.language-switch a:hover {
+.sidebar-language-switch a:hover {
   background: var(--color-background-hover);
   text-decoration: none;
 }

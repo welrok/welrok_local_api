@@ -95,7 +95,7 @@ In response, we receive an updated list of parameters:
    5        1(int8)         manualFloorTemperature     in °C, manual mode temperature by floor
    6        1(int8)         awayAirTemperature         in °C, temperature mode away by air
    7        1(int8)         awayFloorTemperature       in °C, temperature mode away by floor
-   17       4(uint16)       power                      in a.e., If the «Р» is less than or equal to 150, then P = power * 10. If the «Р» is greater than 150, then P = power * 20 - 1500. As a result, we get the specified connected power in Watts.
+   17       4(uint16)       power                      in a.e., If the «P» is less than or equal to 150, then P = power * 10. If the «P» is greater than 150, then P = power * 20 - 1500. As a result, we get the specified connected power in Watts.
    18       2(uint8)        sensorType                 type of connected temperature sensor: 4,7kOhm=0, 6,8kOhm=1, 10kOhm=2, 12kOhm=3, 15kOhm=4, 33kOhm=5, 47kOhm=6
    19       2(uint8)        histeresis                 in °C*10, hysteresis
    21       1(int8)         floorCorrection            in °C*10, floor temperature sensor correction
