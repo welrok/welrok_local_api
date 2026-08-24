@@ -7,6 +7,7 @@ build:
   jobs:
     post_build:
       - python -m sphinx -T -b markdown -d _build/doctrees -D language=en source $READTHEDOCS_OUTPUT/markdown
+      - if [ -d "$READTHEDOCS_OUTPUT/pdf" ]; then find "$READTHEDOCS_OUTPUT/pdf" -type f ! -name "*.pdf" -delete; fi
 
 sphinx:
   configuration: source/conf.py
