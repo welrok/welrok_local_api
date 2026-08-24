@@ -44,6 +44,8 @@ exclude_patterns = []
 
 html_theme = 'furo'
 html_static_path = ['_static']
+html_extra_path = ['favicon.svg']
+html_favicon = 'favicon.svg'
 html_css_files = ['language-switch.css']
 html_add_permalinks = ""
 html_sidebars = {
