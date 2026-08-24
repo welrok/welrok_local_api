@@ -1,8 +1,8 @@
 D2W: List of parameters
-~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
 
 .. Important::
-   The ability to control via the local network without a security token is `blocked by default <safety_ru.html>`_ for security reasons. This may be relevant, for example, when using local control in public places. If this security measure is not needed, disable it on the device by setting the parameter ``bLc`` to the value **oFF**. Otherwise, change requests without this token will not be executed.
+   The ability to control via the local network without a security token is `blocked by default <safety.html>`_ for security reasons. This may be relevant, for example, when using local control in public places. If this security measure is not needed, disable it on the device by setting the parameter ``bLc`` to the value **oFF**. Otherwise, change requests without this token will not be executed.
 
 To obtain a set of all available parameters for a specific device, send the request ``{"cmd":1}``. For example, the response for the D2W device:
 

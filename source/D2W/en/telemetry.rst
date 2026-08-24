@@ -1,5 +1,5 @@
 D2W: Telemetry
-==========
+~~~~~~~~~~~~~~
 
 Telemetry is used to obtain the current state of the device.
 

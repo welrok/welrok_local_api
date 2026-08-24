@@ -58,8 +58,9 @@ Answer:
 
 .. toctree::
    :maxdepth: 1
-   :caption: Подразделы команд:
+   :caption: Command subsections:
    
    Parameters <parameters>
    Telemetry <telemetry>
    Working with time <time>
+   Security key getting <keyGet>

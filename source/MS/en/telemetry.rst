@@ -1,5 +1,5 @@
 MS: Telemetry
-~~~~~~~~~
+~~~~~~~~~~~~~
 
 Telemetry is used to obtain the current state of device.
 

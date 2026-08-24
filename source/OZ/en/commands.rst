@@ -193,7 +193,7 @@ Answer:
 
 .. toctree::
    :maxdepth: 1
-   :caption: Подразделы команд:
+   :caption: Command subsections:
    
    Parameters <parameters>
    Schedule <schedule>

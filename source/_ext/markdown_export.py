@@ -3,6 +3,7 @@ from __future__ import annotations
 import re
 import posixpath
 from pathlib import Path
+from html import escape
 from urllib.parse import quote
 
 from docutils import nodes
@@ -452,21 +453,40 @@ class MarkdownWriter:
         return [f"> **{title}:** {text}", ""]
 
     def render_table(self, node) -> list[str]:
-        rows = []
+        rows: list[list[str]] = []
         for row in node.traverse(nodes.row):
-            cells = [" ".join(entry.astext().split()) for entry in row.traverse(nodes.entry)]
+            cells = [self.render_table_cell(entry) for entry in row.traverse(nodes.entry)]
             rows.append(cells)
         if not rows:
             return []
 
-        width = max(len(row) for row in rows)
-        rows = [row + [""] * (width - len(row)) for row in rows]
-        header = rows[0]
-        lines = [
-            "| " + " | ".join(header) + " |",
-            "| " + " | ".join(["---"] * width) + " |",
-        ]
-        for row in rows[1:]:
-            lines.append("| " + " | ".join(row) + " |")
-        lines.append("")
+        lines = ["<table>"]
+        for row_index, row in enumerate(rows):
+            tag = "th" if row_index == 0 else "td"
+            lines.append("  <tr>")
+            for cell in row:
+                lines.append(f"    <{tag}>{cell}</{tag}>")
+            lines.append("  </tr>")
+        lines.extend(["</table>", ""])
         return lines
+
+    def render_table_cell(self, entry) -> str:
+        parts: list[str] = []
+        for child in entry.children:
+            if isinstance(child, nodes.paragraph):
+                parts.append(self.escape_table_text(self.render_inline_children(child)))
+            elif isinstance(child, nodes.image):
+                uri = escape(child.get("uri", ""))
+                alt = escape(child.get("alt", ""))
+                parts.append(f'<img src="{uri}" alt="{alt}">')
+            elif isinstance(child, nodes.literal_block):
+                parts.append(f"<pre>{escape(child.astext())}</pre>")
+            else:
+                text = child.astext()
+                if text:
+                    parts.append(self.escape_table_text(text))
+        return "<br>".join(parts)
+
+    def escape_table_text(self, text: str) -> str:
+        escaped = escape(text.strip())
+        return re.sub(r"\s*\n\s*", "<br>", escaped)
